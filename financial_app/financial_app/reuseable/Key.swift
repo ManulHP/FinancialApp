@@ -1,5 +1,5 @@
 //
-//  Reusabel_Keyboard.swift
+//  Key.swift
 //  financial_app
 //
 //  Created by user214203 on 3/31/22.
@@ -7,10 +7,13 @@
 
 import UIKit
 
+protocol ReusableProtocol {
+    func didPressNumber(_ number: String)
+    func didPressDecemial(_ value: String)
+    func didPressDelete()
+}
 
-
-
-class Reusabel_Keyboard: UIView {
+class Key: UIView {
 
     var delegate: ReusableProtocol? // variable to hold an instance to any object conforming to ReusableProtocol
 
@@ -37,20 +40,20 @@ class Reusabel_Keyboard: UIView {
         let nib = UINib(nibName: "ReusableView", bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-
-    @IBAction func didPressNegDec(_ sender: UIButton) {
-        if let value = sender.titleLabel?.text {
-            delegate?.didPressDecemialNegative(value)
-        }
-    }
-
+    
+    
     @IBAction func didPressNumber(_ sender: UIButton) {
         if let number = sender.titleLabel?.text {
-                    delegate?.didPressNumber(number)
-                }
+            delegate?.didPressNumber(number)
+        }
+    }
+    
+    @IBAction func didPressDecemial(_ sender: UIButton) {
+        if let value = sender.titleLabel?.text {
+            delegate?.didPressDecemial(value)
+        }
     }
     @IBAction func didPressDelete(_ sender: UIButton) {
         delegate?.didPressDelete()
     }
-
 }
