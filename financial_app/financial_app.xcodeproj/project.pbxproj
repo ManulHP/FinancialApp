@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7435A5627F5799000FECA5C /* Key.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7435A5527F5799000FECA5C /* Key.xib */; };
-		E7435A5827F57A7C00FECA5C /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7435A5727F57A7C00FECA5C /* Key.swift */; };
 		E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F91D27D7333D00579912 /* AppDelegate.swift */; };
 		E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F91F27D7333D00579912 /* SceneDelegate.swift */; };
 		E767F92227D7333D00579912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F92127D7333D00579912 /* ViewController.swift */; };
@@ -18,6 +16,8 @@
 		E767F93527D7333E00579912 /* financial_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F93427D7333E00579912 /* financial_appTests.swift */; };
 		E767F93F27D7333E00579912 /* financial_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F93E27D7333E00579912 /* financial_appUITests.swift */; };
 		E767F94127D7333E00579912 /* financial_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */; };
+		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
+		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
 		E7ED176D27E315120056E449 /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED176C27E315120056E449 /* CalViewController.swift */; };
 		E7ED176F27E315260056E449 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED176E27E315260056E449 /* SaveViewController.swift */; };
 		E7ED177127E315350056E449 /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED177027E315350056E449 /* LoanViewController.swift */; };
@@ -41,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7435A5527F5799000FECA5C /* Key.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Key.xib; sourceTree = "<group>"; };
-		E7435A5727F57A7C00FECA5C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		E767F91A27D7333D00579912 /* financial_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financial_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E767F91D27D7333D00579912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E767F91F27D7333D00579912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		E767F93A27D7333E00579912 /* financial_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = financial_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E767F93E27D7333E00579912 /* financial_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financial_appUITests.swift; sourceTree = "<group>"; };
 		E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financial_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
 		E7ED176C27E315120056E449 /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
 		E7ED176E27E315260056E449 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		E7ED177027E315350056E449 /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
@@ -86,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E73E8A5327E3804C006590D3 /* reuseable */ = {
-			isa = PBXGroup;
-			children = (
-				E7435A5527F5799000FECA5C /* Key.xib */,
-				E7435A5727F57A7C00FECA5C /* Key.swift */,
-			);
-			path = reuseable;
-			sourceTree = "<group>";
-		};
 		E767F91127D7333D00579912 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +109,7 @@
 		E767F91C27D7333D00579912 /* financial_app */ = {
 			isa = PBXGroup;
 			children = (
-				E73E8A5327E3804C006590D3 /* reuseable */,
+				E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */,
 				E7ED176B27E314E70056E449 /* controller */,
 				E767F91D27D7333D00579912 /* AppDelegate.swift */,
 				E767F91F27D7333D00579912 /* SceneDelegate.swift */,
@@ -146,6 +137,15 @@
 				E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */,
 			);
 			path = financial_appUITests;
+			sourceTree = "<group>";
+		};
+		E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */,
+				E7925B4127F6E94A00DFD177 /* ReusableView.xib */,
+			);
+			path = ReusableKeyboard;
 			sourceTree = "<group>";
 		};
 		E7ED176B27E314E70056E449 /* controller */ = {
@@ -263,9 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E767F92A27D7333E00579912 /* LaunchScreen.storyboard in Resources */,
-				E7435A5627F5799000FECA5C /* Key.xib in Resources */,
 				E767F92727D7333E00579912 /* Assets.xcassets in Resources */,
 				E767F92527D7333D00579912 /* Main.storyboard in Resources */,
+				E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +294,8 @@
 				E7ED176F27E315260056E449 /* SaveViewController.swift in Sources */,
 				E7ED176D27E315120056E449 /* CalViewController.swift in Sources */,
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
-				E7435A5827F57A7C00FECA5C /* Key.swift in Sources */,
 				E7ED177127E315350056E449 /* LoanViewController.swift in Sources */,
+				E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */,
 				E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
