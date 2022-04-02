@@ -16,11 +16,11 @@
 		E767F93527D7333E00579912 /* financial_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F93427D7333E00579912 /* financial_appTests.swift */; };
 		E767F93F27D7333E00579912 /* financial_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F93E27D7333E00579912 /* financial_appUITests.swift */; };
 		E767F94127D7333E00579912 /* financial_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */; };
+		E7886F7327F85C3500330253 /* SavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7227F85C3500330253 /* SavingViewController.swift */; };
+		E7886F7527F85C5C00330253 /* CompoundSavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */; };
+		E7886F7727F85C7400330253 /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7627F85C7400330253 /* LoanViewController.swift */; };
 		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
 		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
-		E7ED176D27E315120056E449 /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED176C27E315120056E449 /* CalViewController.swift */; };
-		E7ED176F27E315260056E449 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED176E27E315260056E449 /* SaveViewController.swift */; };
-		E7ED177127E315350056E449 /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED177027E315350056E449 /* LoanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +54,11 @@
 		E767F93A27D7333E00579912 /* financial_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = financial_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E767F93E27D7333E00579912 /* financial_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financial_appUITests.swift; sourceTree = "<group>"; };
 		E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = financial_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7886F7227F85C3500330253 /* SavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingViewController.swift; sourceTree = "<group>"; };
+		E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundSavingViewController.swift; sourceTree = "<group>"; };
+		E7886F7627F85C7400330253 /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
-		E7ED176C27E315120056E449 /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
-		E7ED176E27E315260056E449 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
-		E7ED177027E315350056E449 /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +151,9 @@
 		E7ED176B27E314E70056E449 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				E7ED176C27E315120056E449 /* CalViewController.swift */,
-				E7ED176E27E315260056E449 /* SaveViewController.swift */,
-				E7ED177027E315350056E449 /* LoanViewController.swift */,
+				E7886F7227F85C3500330253 /* SavingViewController.swift */,
+				E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */,
+				E7886F7627F85C7400330253 /* LoanViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -291,12 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E767F92227D7333D00579912 /* ViewController.swift in Sources */,
-				E7ED176F27E315260056E449 /* SaveViewController.swift in Sources */,
-				E7ED176D27E315120056E449 /* CalViewController.swift in Sources */,
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
-				E7ED177127E315350056E449 /* LoanViewController.swift in Sources */,
 				E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */,
+				E7886F7727F85C7400330253 /* LoanViewController.swift in Sources */,
+				E7886F7327F85C3500330253 /* SavingViewController.swift in Sources */,
 				E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */,
+				E7886F7527F85C5C00330253 /* CompoundSavingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
