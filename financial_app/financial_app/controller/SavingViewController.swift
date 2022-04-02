@@ -1,13 +1,13 @@
 //
-//  SaveViewController.swift
+//  SavingViewController.swift
 //  financial_app
 //
-//  Created by user214203 on 3/17/22.
+//  Created by user214203 on 4/2/22.
 //
 
 import UIKit
 
-class SaveViewController: UIViewController {
+class SavingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +16,6 @@ class SaveViewController: UIViewController {
     }
     
 
-    @IBAction func saveSaving(_ sender: UIBarButtonItem) {
-    }
     /*
     // MARK: - Navigation
 
