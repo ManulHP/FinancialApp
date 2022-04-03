@@ -9,8 +9,12 @@ import UIKit
 
 class LoanViewController: UIViewController {
 
+    @IBOutlet var keyboard: ReusableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboard.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -26,4 +30,20 @@ class LoanViewController: UIViewController {
     }
     */
 
+}
+
+extension LoanViewController: ReusableProtocol {
+    func didPressDecemial(_ value: String) {
+        print("Decimal")
+    }
+    
+    func didPressNumber(_ number: String) {
+        print("Working")
+    }
+
+    func didPressDelete() {
+        print("Deleted")
+    }
+    
+    
 }

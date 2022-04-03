@@ -24,6 +24,7 @@
 		E791DAAB27F96A2400563241 /* compound.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E791DAAA27F96A2400563241 /* compound.jpeg */; };
 		E791DAAE27F96A3D00563241 /* loan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E791DAAC27F96A3D00563241 /* loan.jpg */; };
 		E791DAAF27F96A3D00563241 /* saving.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E791DAAD27F96A3D00563241 /* saving.jpg */; };
+		E791DAB327F9812500563241 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791DAB227F9812500563241 /* Extensions.swift */; };
 		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
 		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		E791DAAA27F96A2400563241 /* compound.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = compound.jpeg; path = ../../../../../../../Downloads/compound.jpeg; sourceTree = "<group>"; };
 		E791DAAC27F96A3D00563241 /* loan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loan.jpg; path = ../../../../../../../Downloads/loan.jpg; sourceTree = "<group>"; };
 		E791DAAD27F96A3D00563241 /* saving.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = saving.jpg; path = ../../../../../../../Downloads/saving.jpg; sourceTree = "<group>"; };
+		E791DAB227F9812500563241 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 		E767F91C27D7333D00579912 /* financial_app */ = {
 			isa = PBXGroup;
 			children = (
+				E791DAB127F9810F00563241 /* Extensions */,
 				E791DAA927F96A0100563241 /* Images */,
 				E791DAA427F95E1200563241 /* About */,
 				E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */,
@@ -167,6 +170,14 @@
 				E791DAAA27F96A2400563241 /* compound.jpeg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		E791DAB127F9810F00563241 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E791DAB227F9812500563241 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */ = {
@@ -329,6 +340,7 @@
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
 				E791DAA827F95E9100563241 /* AboutViewController.swift in Sources */,
 				E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */,
+				E791DAB327F9812500563241 /* Extensions.swift in Sources */,
 				E7886F7727F85C7400330253 /* LoanViewController.swift in Sources */,
 				E7886F7327F85C3500330253 /* SavingViewController.swift in Sources */,
 				E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */,

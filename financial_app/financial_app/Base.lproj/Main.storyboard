@@ -478,7 +478,7 @@
                                     <constraint firstItem="2xl-I3-rul" firstAttribute="top" secondItem="80O-Gy-Rla" secondAttribute="topMargin" id="s2h-Hb-PTB"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-N8-lWW">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-N8-lWW" customClass="ReusableView" customModule="financial_app" customModuleProvider="target">
                                 <rect key="frame" x="20" y="534" width="381" height="279"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -499,6 +499,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Loan Calculator" id="wDl-VB-Lmg"/>
+                    <connections>
+                        <outlet property="keyboard" destination="QMS-N8-lWW" id="nLf-XK-10B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ye-b1-ME6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
