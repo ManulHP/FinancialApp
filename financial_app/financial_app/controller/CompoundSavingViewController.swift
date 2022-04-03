@@ -9,8 +9,12 @@ import UIKit
 
 class CompoundSavingViewController: UIViewController {
 
+    @IBOutlet var keyboard: ReusableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboard.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -26,4 +30,20 @@ class CompoundSavingViewController: UIViewController {
     }
     */
 
+}
+
+extension CompoundSavingViewController: ReusableProtocol {
+    func didPressDecemial(_ value: String) {
+        print("Decimal")
+    }
+    
+    func didPressNumber(_ number: String) {
+        print("Working")
+    }
+
+    func didPressDelete() {
+        print("Deleted")
+    }
+    
+    
 }

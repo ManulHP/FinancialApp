@@ -191,6 +191,11 @@
                                     <constraint firstAttribute="height" constant="452" id="KUw-Rv-ku5"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41M-bj-xBr" customClass="ReusableView" customModule="financial_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="606" width="374" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gAD-7f-1Is"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -206,6 +211,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Saving Calculator" id="R0Z-et-vQH"/>
+                    <connections>
+                        <outlet property="keyboard" destination="41M-bj-xBr" id="n7R-3d-iQk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUp-3Q-I2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -348,6 +356,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-gG-zzW" customClass="ReusableView" customModule="financial_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="606" width="374" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LCO-Yx-Lio"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -362,6 +375,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Compound Saving Calculator" id="wxr-7C-NSq"/>
+                    <connections>
+                        <outlet property="keyboard" destination="rZ3-gG-zzW" id="6pO-3d-WcI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uw9-Rd-0sa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,12 +494,22 @@
                                     <constraint firstItem="2xl-I3-rul" firstAttribute="top" secondItem="80O-Gy-Rla" secondAttribute="topMargin" id="s2h-Hb-PTB"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-N8-lWW" customClass="ReusableView" customModule="financial_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="606" width="374" height="207"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="lLO-FR-UiQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7K-tR-rXo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QMS-N8-lWW" firstAttribute="bottom" secondItem="T7K-tR-rXo" secondAttribute="bottom" id="2wO-qR-Dx2"/>
+                            <constraint firstItem="T7K-tR-rXo" firstAttribute="trailing" secondItem="QMS-N8-lWW" secondAttribute="trailing" constant="20" id="Crj-Oo-V4z"/>
                             <constraint firstItem="7Wu-UK-R7U" firstAttribute="top" secondItem="T7K-tR-rXo" secondAttribute="top" id="ENy-VC-448"/>
                             <constraint firstItem="T7K-tR-rXo" firstAttribute="bottom" secondItem="80O-Gy-Rla" secondAttribute="bottom" constant="360" id="J1L-5k-Xd1"/>
+                            <constraint firstItem="QMS-N8-lWW" firstAttribute="leading" secondItem="80O-Gy-Rla" secondAttribute="leading" id="XlC-Wi-YFQ"/>
                             <constraint firstItem="T7K-tR-rXo" firstAttribute="trailing" secondItem="80O-Gy-Rla" secondAttribute="trailing" constant="20" id="aDR-UQ-IUK"/>
                             <constraint firstItem="7Wu-UK-R7U" firstAttribute="leading" secondItem="T7K-tR-rXo" secondAttribute="leading" id="bkY-8z-aL2"/>
                             <constraint firstItem="80O-Gy-Rla" firstAttribute="leading" secondItem="T7K-tR-rXo" secondAttribute="leading" constant="20" id="c9d-bE-jW6"/>
@@ -494,6 +520,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Loan Calculator" id="wDl-VB-Lmg"/>
+                    <connections>
+                        <outlet property="keyboard" destination="QMS-N8-lWW" id="nLf-XK-10B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ye-b1-ME6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -39,4 +39,22 @@ class ReusableView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 
+    @IBAction func didPressNumber(_ sender: UIButton) {
+        if let number = sender.titleLabel?.text {
+            delegate?.didPressNumber(number)
+        }
+    }
+    
+    
+    @IBAction func didPressDecemial(_ sender: UIButton) {
+        if let value = sender.titleLabel?.text {
+                delegate?.didPressDecemial(value)
+        }
+    }
+    
+    @IBAction func didPressDelete(_ sender: UIButton) {
+        delegate?.didPressDelete()
+    }
+    
+    
 }
