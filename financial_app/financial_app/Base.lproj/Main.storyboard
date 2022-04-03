@@ -502,7 +502,7 @@
         <!--Help-->
         <scene sceneID="jJt-dY-lcn">
             <objects>
-                <viewController id="GC7-bb-0uV" sceneMemberID="viewController">
+                <viewController id="GC7-bb-0uV" customClass="AboutViewController" customModule="financial_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gd-lr-Paj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw1-or-L1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="1102"/>
+            <point key="canvasLocation" x="1798.5507246376812" y="1101.5625"/>
         </scene>
         <!--Loan-->
         <scene sceneID="OPm-aK-eAI">
