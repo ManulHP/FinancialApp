@@ -24,16 +24,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="9"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="kip-13-Pkq"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmR-YB-udo">
                                     <rect key="frame" x="135.5" y="0.0" width="128" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="8"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="HYk-4V-SOh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEI-p4-7Gw">
                                     <rect key="frame" x="271.5" y="0.0" width="127.5" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="7"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="F6m-7C-evE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -44,16 +53,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="6"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="NoR-cK-kDf"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvw-V3-P4i">
                                     <rect key="frame" x="135.5" y="0.0" width="128" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="5"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="9kf-MX-hBP"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-04-i98">
                                     <rect key="frame" x="271.5" y="0.0" width="127.5" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="4"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="LqB-A5-oZ7"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -64,16 +82,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="3"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="kbm-4w-DhY"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-1s-n1B">
                                     <rect key="frame" x="135.5" y="0.0" width="128" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="2"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZCd-Ds-XTb"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-mS-gjo">
                                     <rect key="frame" x="271.5" y="0.0" width="127.5" height="94"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="1"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ih0-EN-6P9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -84,16 +111,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="127.5" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="."/>
+                                    <connections>
+                                        <action selector="didPressDecemial:" destination="iN0-l3-epB" eventType="touchUpInside" id="9DX-8a-yMZ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUQ-YU-B6p">
                                     <rect key="frame" x="135.5" y="0.0" width="128" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="0"/>
+                                    <connections>
+                                        <action selector="didPressNumber:" destination="iN0-l3-epB" eventType="touchUpInside" id="GJx-XV-DqE"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-Ka-zXF">
                                     <rect key="frame" x="271.5" y="0.0" width="127.5" height="93.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="DEL"/>
+                                    <connections>
+                                        <action selector="didPressDelete:" destination="iN0-l3-epB" eventType="touchUpInside" id="itP-2u-Ntk"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
