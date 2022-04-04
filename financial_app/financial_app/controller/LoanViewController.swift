@@ -11,11 +11,18 @@ class LoanViewController: UIViewController {
 
     @IBOutlet var keyboard: ReusableView!
     
+    
+    @IBOutlet var textfields: [UITextField]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         keyboard.delegate = self
 
+        textfields.forEach { textfield in
+            textfield.inputView = UIView()
+            textfield.inputAccessoryView = UIView()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -34,15 +41,15 @@ class LoanViewController: UIViewController {
 
 extension LoanViewController: ReusableProtocol {
     func didPressDecemial(_ value: String) {
-        print("Decimal")
+        print(".")
     }
     
     func didPressNumber(_ number: String) {
-        print("Working")
+        print(number)
     }
 
     func didPressDelete() {
-        print("Deleted")
+        print("DEL")
     }
     
     

@@ -33,15 +33,15 @@ class SavingViewController: UIViewController {
 
 extension SavingViewController: ReusableProtocol {
     func didPressDecemial(_ value: String) {
-        print("Decimal")
+        print(".")
     }
     
     func didPressNumber(_ number: String) {
-        print("Working")
+        print(number)
     }
 
     func didPressDelete() {
-        print("Deleted")
+        print("DEL")
     }
     
     
