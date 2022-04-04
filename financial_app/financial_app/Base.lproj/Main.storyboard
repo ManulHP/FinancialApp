@@ -539,6 +539,49 @@
                     <view key="view" contentMode="scaleToFill" id="8gd-lr-Paj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89V-SD-7d7">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H5a-7w-d2y">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="766"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4z-9h-ptr">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="8vy-nD-HV5"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zph-gY-qLe">
+                                                <rect key="frame" x="0.0" y="258" width="374" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="shp-XZ-Qqc"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-WQ-2Gc">
+                                                <rect key="frame" x="0.0" y="516" width="374" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="oas-k0-do3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="H5a-7w-d2y" firstAttribute="top" secondItem="ZJ7-zY-cwW" secondAttribute="top" id="KW1-WK-D7H"/>
+                                    <constraint firstItem="H5a-7w-d2y" firstAttribute="bottom" secondItem="ZJ7-zY-cwW" secondAttribute="bottom" id="aqE-pr-0jh"/>
+                                    <constraint firstItem="H5a-7w-d2y" firstAttribute="leading" secondItem="ZJ7-zY-cwW" secondAttribute="leading" id="glj-Of-Muh"/>
+                                    <constraint firstItem="H5a-7w-d2y" firstAttribute="width" secondItem="uEc-F0-ATP" secondAttribute="width" id="uSX-fx-F23"/>
+                                    <constraint firstItem="H5a-7w-d2y" firstAttribute="trailing" secondItem="ZJ7-zY-cwW" secondAttribute="trailing" id="w2d-rI-7Hc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZJ7-zY-cwW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uEc-F0-ATP"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wzZ-qD-EPD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -623,6 +666,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
