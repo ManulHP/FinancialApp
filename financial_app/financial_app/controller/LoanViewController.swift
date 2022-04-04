@@ -4,7 +4,6 @@
 //
 //  Created by user214203 on 4/2/22.
 //
-
 import UIKit
 
 class LoanViewController: UIViewController {
