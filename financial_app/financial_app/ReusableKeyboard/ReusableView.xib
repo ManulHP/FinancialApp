@@ -126,7 +126,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-Ka-zXF">
                                     <rect key="frame" x="271.5" y="0.0" width="127.5" height="93.5"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="tinted" title="DEL"/>
+                                    <buttonConfiguration key="configuration" style="tinted" image="delete.left.fill" catalog="system" title=""/>
                                     <connections>
                                         <action selector="didPressDelete:" destination="-1" eventType="touchUpInside" id="0Eo-p0-pZf"/>
                                     </connections>
@@ -149,6 +149,7 @@
         </view>
     </objects>
     <resources>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

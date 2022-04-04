@@ -19,37 +19,52 @@ class LoanViewController: UIViewController {
         
         keyboard.delegate = self
 
+        // disable the default keyboard
         textfields.forEach { textfield in
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
         }
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getFirstResponder() -> UITextField {
+        let textfield = textfields.filter { fResponder in
+            return fResponder.isFirstResponder
+        }.first!
+        
+        return textfield
     }
-    */
+    
 
 }
 
 extension LoanViewController: ReusableProtocol {
     func didPressDecemial(_ value: String) {
         print(".")
+        let firstResponder = getFirstResponder()
+        if var inputText = firstResponder.text{
+            if !inputText.contains(".") && inputText.count > 0 {
+                inputText += "."
+                firstResponder.text = inputText
+            }
+        }
+        
     }
     
     func didPressNumber(_ number: String) {
         print(number)
+        let firstResponder = getFirstResponder()
+        if var inputText = firstResponder.text{
+            inputText += number
+            firstResponder.text = inputText
+        }
     }
 
     func didPressDelete() {
         print("DEL")
+        let firstResponder = getFirstResponder()
+        if !(firstResponder.text?.isEmpty ?? false){
+            _ = firstResponder.text?.removeLast()
+        }
     }
     
     
