@@ -12,10 +12,19 @@ class LoanViewController: UIViewController {
     @IBOutlet var keyboard: ReusableView!
     
     
-    @IBOutlet var textfields: [UITextField]!
+    @IBOutlet var noOfPayamentsTF: UITextField!
+    @IBOutlet var monthlyPaymentTF: UITextField!
+    @IBOutlet var loanInterestTF: UITextField!
+    @IBOutlet var loanAmountTF: UITextField!
+    
+    var textfields: [UITextField] {
+        return [loanAmountTF, loanInterestTF, monthlyPaymentTF, noOfPayamentsTF]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showAlert()
         
         keyboard.delegate = self
 
@@ -28,13 +37,52 @@ class LoanViewController: UIViewController {
     }
     
     private func getFirstResponder() -> UITextField {
-        let textfield = textfields.filter { fResponder in
+        let textfieldRespond = textfields.filter { fResponder in
             return fResponder.isFirstResponder
         }.first!
         
-        return textfield
+        return textfieldRespond
     }
-
+    
+    private func resetTf() {
+        loanAmountTF.text = ""
+        loanInterestTF.text = ""
+        monthlyPaymentTF.text = ""
+        noOfPayamentsTF.text = ""
+    }
+    
+    private func calculation() {
+        var P = Double(loanAmountTF.text!)
+        var R = Double(loanInterestTF.text!)
+        var PMT = Double(monthlyPaymentTF.text!)
+        var NP = Double(noOfPayamentsTF.text!)
+        
+        var missingValue = 0.0
+        
+        if (loanAmountTF.text?.isEmpty)! {
+            missingValue = calMissingLoanAmount(interest: R!, monthlyPayment: PMT!, noOfPay: NP!)
+            loanAmountTF.text = String(missingValue)
+        }else if (monthlyPaymentTF.text?.isEmpty)! {
+            missingValue = calMissingMonthlyPayment(interest: R!, loanAmount: P!, noOfPay: NP!)
+            monthlyPaymentTF.text = String(missingValue)
+        }else if (noOfPayamentsTF.text?.isEmpty)! {
+            missingValue = calMissingNoOfPayment(interest: R!, loanAmount: P!, monthlyPayment: PMT!)
+            noOfPayamentsTF.text = String(missingValue)
+        }else if (loanInterestTF.text?.isEmpty)! {
+            missingValue = calMissingLoanInterest(loanAmount:P!, monthlyPayment: PMT!, noOfPayment: NP!)
+            loanInterestTF.text = String(missingValue)
+        }
+    }
+    
+    
+    @IBAction func calculateMissingValue(_ sender: UIButton) {
+        calculation()
+    }
+    
+    @IBAction func restBtn(_ sender: UIButton) {
+        resetTf()
+    }
+    
 }
 
 extension LoanViewController: ReusableProtocol {

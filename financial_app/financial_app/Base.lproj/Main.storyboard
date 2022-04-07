@@ -408,12 +408,18 @@
                                         <rect key="frame" x="209.5" y="9.5" width="100" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculateMissingValue:" destination="CMV-Vg-zbc" eventType="touchUpInside" id="u7P-7A-jyR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erc-oU-agB">
                                         <rect key="frame" x="314.5" y="9.5" width="99.5" height="31"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
+                                        <connections>
+                                            <action selector="restBtn:" destination="CMV-Vg-zbc" eventType="touchUpInside" id="91b-se-OwQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -522,10 +528,10 @@
                     <navigationItem key="navigationItem" title="Loan Calculator" id="wDl-VB-Lmg"/>
                     <connections>
                         <outlet property="keyboard" destination="QMS-N8-lWW" id="nLf-XK-10B"/>
-                        <outletCollection property="textfields" destination="z39-lc-gxI" collectionClass="NSMutableArray" id="3gq-zg-N1d"/>
-                        <outletCollection property="textfields" destination="jbh-WN-5w6" collectionClass="NSMutableArray" id="6hK-ix-9Tg"/>
-                        <outletCollection property="textfields" destination="I3W-XK-Kjp" collectionClass="NSMutableArray" id="EOg-Hu-IkT"/>
-                        <outletCollection property="textfields" destination="wUs-69-gQc" collectionClass="NSMutableArray" id="eNk-IY-ouL"/>
+                        <outlet property="loanAmountTF" destination="wUs-69-gQc" id="SRf-TS-nh0"/>
+                        <outlet property="loanInterestTF" destination="z39-lc-gxI" id="iXO-nf-EcI"/>
+                        <outlet property="monthlyPaymentTF" destination="jbh-WN-5w6" id="S4Z-ni-AMB"/>
+                        <outlet property="noOfPayamentsTF" destination="I3W-XK-Kjp" id="idJ-gz-zs9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ye-b1-ME6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
