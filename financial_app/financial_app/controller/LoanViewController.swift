@@ -24,7 +24,7 @@ class LoanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showAlert()
+        showAlert(title: "WARNING", message: "Please keep one field empty to get the results")
         
         keyboard.delegate = self
 
@@ -102,6 +102,9 @@ class LoanViewController: UIViewController {
         } else {
             UserDefaults.standard.set([saveString], forKey: "LOAN")
         }
+        
+        showAlert(title: "Successful", message: "Data entered are saved")
+
     }
     
 }

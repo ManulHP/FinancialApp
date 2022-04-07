@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func showAlert() {
-        let alertBox = UIAlertController(title: "Warning", message: "Please keep one field empty to get the results",preferredStyle: UIAlertController.Style.alert)
+    func showAlert(title: String, message: String) {
+        let alertBox = UIAlertController(title: title, message: message,preferredStyle: UIAlertController.Style.alert)
         
         alertBox.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         

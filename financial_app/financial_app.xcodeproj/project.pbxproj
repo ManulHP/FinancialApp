@@ -27,6 +27,7 @@
 		E791DAB327F9812500563241 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791DAB227F9812500563241 /* Extensions.swift */; };
 		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
 		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
+		E79A1F0227FF22B200009817 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A1F0127FF22B200009817 /* Saving.swift */; };
 		E7E477A027FE147F0060B2CB /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4779F27FE147F0060B2CB /* Loan.swift */; };
 		E7F52AA127FE8FC1001697DF /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F52AA027FE8FC1001697DF /* AlertMessage.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		E791DAB227F9812500563241 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
+		E79A1F0127FF22B200009817 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		E7E4779F27FE147F0060B2CB /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		E7F52AA027FE8FC1001697DF /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 				E791DAB227F9812500563241 /* Extensions.swift */,
 				E7E4779F27FE147F0060B2CB /* Loan.swift */,
 				E7F52AA027FE8FC1001697DF /* AlertMessage.swift */,
+				E79A1F0127FF22B200009817 /* Saving.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */,
 				E7F52AA127FE8FC1001697DF /* AlertMessage.swift in Sources */,
 				E7886F7527F85C5C00330253 /* CompoundSavingViewController.swift in Sources */,
+				E79A1F0227FF22B200009817 /* Saving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

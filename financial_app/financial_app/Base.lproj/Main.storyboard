@@ -82,6 +82,9 @@
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetBtn:" destination="BWi-ar-Rlc" eventType="touchUpInside" id="sEi-BP-MnZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -212,7 +215,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Saving Calculator" id="R0Z-et-vQH"/>
                     <connections>
+                        <outlet property="futureValue" destination="dcr-CO-dc8" id="52U-Pn-Wbi"/>
+                        <outlet property="interest" destination="3UU-2s-2ta" id="dqJ-lP-m9T"/>
                         <outlet property="keyboard" destination="41M-bj-xBr" id="n7R-3d-iQk"/>
+                        <outlet property="monthlyPayment" destination="vC5-Do-sdn" id="RFi-UZ-JGG"/>
+                        <outlet property="noOfPayments" destination="jSM-mn-Kbq" id="BU5-8V-3MK"/>
+                        <outlet property="principalAmount" destination="UR8-qg-FhL" id="wma-99-5kh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUp-3Q-I2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
