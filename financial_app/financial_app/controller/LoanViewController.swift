@@ -33,7 +33,6 @@ class LoanViewController: UIViewController {
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
         }
-        
     }
     
     private func getFirstResponder() -> UITextField {
@@ -81,6 +80,28 @@ class LoanViewController: UIViewController {
     
     @IBAction func restBtn(_ sender: UIButton) {
         resetTf()
+    }
+    
+    
+    @IBAction func didPressSave(_ sender: Any) {
+        print("Save")
+        
+        var saveString = "P: \(loanAmountTF.text)\nR: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nNP: \(noOfPayamentsTF.text)"
+        
+        print(saveString)
+        saveHistory(saveString: saveString)
+    }
+    
+    private func saveHistory(saveString: String) {
+        if var saveValue = UserDefaults.standard.array(forKey: "LOAN") as? [String] {
+            if saveValue.count > 7 {
+                _ = saveValue.removeFirst()
+            }
+            saveValue.append(saveString)
+            UserDefaults.standard.set(saveValue, forKey: "LOAN")
+        } else {
+            UserDefaults.standard.set([saveString], forKey: "LOAN")
+        }
     }
     
 }
