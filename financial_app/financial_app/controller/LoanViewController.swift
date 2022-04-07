@@ -77,7 +77,13 @@ class LoanViewController: UIViewController {
     
     
     @IBAction func calculateMissingValue(_ sender: UIButton) {
-        calculation()
+        if (loanAmountTF.text != "" && loanInterestTF.text != "" && monthlyPaymentTF.text != "" && noOfPayamentsTF.text != ""){
+            
+            showAlert(title: "WARNING", message: "Keep one field empty for conversion")
+        }else {
+            calculation()
+        }
+        
     }
     
     @IBAction func restBtn(_ sender: UIButton) {
