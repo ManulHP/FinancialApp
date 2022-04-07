@@ -50,11 +50,13 @@ class LoanViewController: UIViewController {
         noOfPayamentsTF.text = ""
     }
     
+    
+    
     private func calculation() {
-        var P = Double(loanAmountTF.text!)
-        var R = Double(loanInterestTF.text!)
-        var PMT = Double(monthlyPaymentTF.text!)
-        var NP = Double(noOfPayamentsTF.text!)
+        let P = Double(loanAmountTF.text!)
+        let R = Double(loanInterestTF.text!)
+        let PMT = Double(monthlyPaymentTF.text!)
+        let NP = Double(noOfPayamentsTF.text!)
         
         var missingValue = 0.0
         
