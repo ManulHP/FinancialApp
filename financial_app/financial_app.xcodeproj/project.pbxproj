@@ -27,6 +27,7 @@
 		E79A1F0227FF22B200009817 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A1F0127FF22B200009817 /* Saving.swift */; };
 		E7E477A027FE147F0060B2CB /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4779F27FE147F0060B2CB /* Loan.swift */; };
 		E7F52AA127FE8FC1001697DF /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F52AA027FE8FC1001697DF /* AlertMessage.swift */; };
+		E7FDBE56280013000087FA7A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FDBE55280013000087FA7A /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E79A1F0127FF22B200009817 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
 		E7E4779F27FE147F0060B2CB /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		E7F52AA027FE8FC1001697DF /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		E7FDBE55280013000087FA7A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */,
 				E7886F7627F85C7400330253 /* LoanViewController.swift */,
 				E791DAA727F95E9100563241 /* AboutViewController.swift */,
+				E7FDBE55280013000087FA7A /* HistoryViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				E791DAA627F95E3500563241 /* About.swift in Sources */,
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
 				E791DAA827F95E9100563241 /* AboutViewController.swift in Sources */,
+				E7FDBE56280013000087FA7A /* HistoryViewController.swift in Sources */,
 				E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */,
 				E791DAB327F9812500563241 /* Extensions.swift in Sources */,
 				E7886F7727F85C7400330253 /* LoanViewController.swift in Sources */,
