@@ -130,9 +130,9 @@
 				E767F91D27D7333D00579912 /* AppDelegate.swift */,
 				E767F91F27D7333D00579912 /* SceneDelegate.swift */,
 				E767F92127D7333D00579912 /* ViewController.swift */,
-				E767F92327D7333D00579912 /* Main.storyboard */,
 				E767F92627D7333E00579912 /* Assets.xcassets */,
 				E767F92827D7333E00579912 /* LaunchScreen.storyboard */,
+				E767F92327D7333D00579912 /* Main.storyboard */,
 				E767F92B27D7333E00579912 /* Info.plist */,
 			);
 			path = financial_app;
