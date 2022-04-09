@@ -12,7 +12,7 @@
         <scene sceneID="fYL-P5-Xwv">
             <objects>
                 <navigationController id="7cr-2Q-PQe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Savings" id="RXL-Gs-JPY"/>
+                    <tabBarItem key="tabBarItem" title="Savings" selectedImage="pencil.circle" catalog="system" id="RXL-Gs-JPY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WgN-44-uyI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,6 +76,9 @@
                                         <rect key="frame" x="0.0" y="9.5" width="100" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                        <connections>
+                                            <action selector="didPressSave:" destination="BWi-ar-Rlc" eventType="touchUpInside" id="MPX-Ml-Ewk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JV-ln-JXx">
                                         <rect key="frame" x="105" y="9.5" width="99.5" height="31"/>
@@ -109,96 +112,80 @@
                                 <rect key="frame" x="20" y="146" width="374" height="452"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-5q-PJE">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Principal Amount $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-LN-iBX">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-qg-FhL">
-                                                <rect key="frame" x="0.0" y="38" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8s6-k1-HEU">
-                                        <rect key="frame" x="0.0" y="76" width="374" height="71.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="374" height="86.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-TF-B97">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3UU-2s-2ta">
-                                                <rect key="frame" x="0.0" y="38.5" width="374" height="33"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0kz-OK-OtV">
-                                        <rect key="frame" x="0.0" y="152.5" width="374" height="71"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Payment $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22H-2c-qKU">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-Do-sdn">
-                                                <rect key="frame" x="0.0" y="38" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VJn-um-hXm">
-                                        <rect key="frame" x="0.0" y="228.5" width="374" height="71"/>
+                                        <rect key="frame" x="0.0" y="183" width="374" height="86"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Value $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01v-Sc-pPi">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcr-CO-dc8">
-                                                <rect key="frame" x="0.0" y="38" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="374" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d7P-hO-FaV">
-                                        <rect key="frame" x="0.0" y="304.5" width="374" height="71.5"/>
+                                        <rect key="frame" x="0.0" y="274" width="374" height="86.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liz-qH-NOl">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-mn-Kbq">
-                                                <rect key="frame" x="0.0" y="38.5" width="374" height="33"/>
+                                                <rect key="frame" x="0.0" y="46" width="374" height="40.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-DS-AER">
-                                        <rect key="frame" x="0.0" y="381" width="374" height="71"/>
+                                        <rect key="frame" x="0.0" y="365.5" width="374" height="86.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOM-Ff-201">
-                                                <rect key="frame" x="0.0" y="25" width="184.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="33" width="184.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-aW-Hzh">
-                                                <rect key="frame" x="189.5" y="20" width="186.5" height="31"/>
+                                                <rect key="frame" x="189.5" y="28" width="186.5" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -228,12 +215,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Saving Calculator" id="R0Z-et-vQH"/>
                     <connections>
-                        <outlet property="futureValueTF" destination="dcr-CO-dc8" id="52U-Pn-Wbi"/>
-                        <outlet property="interestTF" destination="3UU-2s-2ta" id="dqJ-lP-m9T"/>
+                        <outlet property="futureValueTF" destination="dcr-CO-dc8" id="HHr-to-fq7"/>
+                        <outlet property="interestTF" destination="3UU-2s-2ta" id="Qux-pI-uNu"/>
                         <outlet property="keyboard" destination="41M-bj-xBr" id="n7R-3d-iQk"/>
-                        <outlet property="monthlyPaymentTF" destination="vC5-Do-sdn" id="RFi-UZ-JGG"/>
-                        <outlet property="noOfPaymentsTF" destination="jSM-mn-Kbq" id="BU5-8V-3MK"/>
-                        <outlet property="principalAmountTF" destination="UR8-qg-FhL" id="wma-99-5kh"/>
+                        <outlet property="noOfPaymentsTF" destination="jSM-mn-Kbq" id="Y6z-uC-NnO"/>
+                        <outlet property="principalAmountTF" destination="UR8-qg-FhL" id="zch-Dy-Xom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUp-3Q-I2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -689,11 +675,11 @@
             </objects>
             <point key="canvasLocation" x="1798.5507246376812" y="1101.5625"/>
         </scene>
-        <!--Loan-->
+        <!--Compund-->
         <scene sceneID="OPm-aK-eAI">
             <objects>
                 <navigationController id="fO2-dc-Swk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Loan" id="6i5-6Q-XTs"/>
+                    <tabBarItem key="tabBarItem" title="Compund" id="6i5-6Q-XTs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gZU-kg-YUg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -706,11 +692,11 @@
             </objects>
             <point key="canvasLocation" x="-55" y="346"/>
         </scene>
-        <!--Mortgage-->
+        <!--Loan-->
         <scene sceneID="jfr-Mz-b4n">
             <objects>
                 <navigationController id="dOL-n2-e4N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mortgage" id="LoG-SV-9wK"/>
+                    <tabBarItem key="tabBarItem" title="Loan" id="LoG-SV-9wK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fd-YO-Op8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -747,7 +733,7 @@
         <scene sceneID="mkA-LX-Pdf">
             <objects>
                 <navigationController id="acl-Kl-vE6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Help" id="THj-uu-ocl"/>
+                    <tabBarItem key="tabBarItem" title="Help" selectedImage="questionmark.circle" catalog="system" id="THj-uu-ocl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D5g-JT-4sE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -764,6 +750,8 @@
     <resources>
         <image name="compound" width="1280" height="853"/>
         <image name="loan" width="970" height="646"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="save" width="1200" height="625"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

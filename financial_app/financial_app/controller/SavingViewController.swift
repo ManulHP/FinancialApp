@@ -12,14 +12,13 @@ class SavingViewController: UIViewController {
     @IBOutlet var keyboard: ReusableView!
     
     
+    @IBOutlet var principalAmountTF: UITextField!
     @IBOutlet var noOfPaymentsTF: UITextField!
     @IBOutlet var futureValueTF: UITextField!
-    @IBOutlet var monthlyPaymentTF: UITextField!
     @IBOutlet var interestTF: UITextField!
-    @IBOutlet var principalAmountTF: UITextField!
     
     var textfields: [UITextField] {
-        return [noOfPaymentsTF, futureValueTF, monthlyPaymentTF, interestTF, principalAmountTF]
+        return [noOfPaymentsTF, futureValueTF, interestTF, principalAmountTF]
     }
     
     override func viewDidLoad() {
@@ -47,7 +46,6 @@ class SavingViewController: UIViewController {
     private func resetTf() {
         noOfPaymentsTF.text = ""
         futureValueTF.text = ""
-        monthlyPaymentTF.text = ""
         interestTF.text = ""
         principalAmountTF.text = ""
     }
@@ -55,7 +53,6 @@ class SavingViewController: UIViewController {
     private func calculateSaving() {
         let P = Double(principalAmountTF.text!)
         let I = Double(interestTF.text!)
-        let MP = Double(monthlyPaymentTF.text!)
         let FV = Double(futureValueTF.text!)
         let NP = Double(noOfPaymentsTF.text!)
         let CI = Double(12)
@@ -78,7 +75,29 @@ class SavingViewController: UIViewController {
         
     }
     
+    private func saveHistory(saveString: String) {
+        if var saveValue = UserDefaults.standard.array(forKey: "SAVE") as? [String] {
+            if saveValue.count > 7 {
+                _ = saveValue.removeFirst()
+            }
+            saveValue.append(saveString)
+            UserDefaults.standard.set(saveValue, forKey: "SAVE")
+        } else {
+            UserDefaults.standard.set([saveString], forKey: "SAVE")
+        }
+        
+        showAlert(title: "Successful", message: "Data entered are saved")
+
+    }
+    
    
+    @IBAction func didPressSave(_ sender: Any) {
+        var saveString = "Principal Amount: \(principalAmountTF.text)\nInterest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
+        
+        print(saveString)
+        saveHistory(saveString: saveString)
+    }
+    
     @IBAction func calculateMissingValue(_ sender: Any) {
         calculateSaving()
     }
