@@ -42,16 +42,24 @@ class CompoundSavingViewController: UIViewController {
         return textfieldRespond
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func resetTf() {
+        principalAmountTF.text = ""
+        futureValueTF.text = ""
+        monthlyPaymentTF.text = ""
+        interestTF.text = ""
+        noOfPaymentsTF.text = ""
     }
-    */
+    
+    private func calculateCompoundSaving() {
+        let P = Double(principalAmountTF.text!)
+        let I = Double(interestTF.text!)
+        let FV = Double(futureValueTF.text!)
+        let NP = Double(noOfPaymentsTF.text!)
+        let CI = Double(12)
+        
+        var missingValue = 0.0
+        
+    }
 
 }
 
