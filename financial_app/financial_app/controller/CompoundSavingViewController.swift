@@ -31,6 +31,8 @@ class CompoundSavingViewController: UIViewController {
         textfields.forEach { textfield in
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
+            textfield.layer.cornerRadius = 10
+            textfield.layer.borderWidth = 0.1
         }
     }
     
