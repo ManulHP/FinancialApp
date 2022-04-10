@@ -35,6 +35,23 @@ class HistoryViewController: UIViewController {
         index = segmentControl.selectedSegmentIndex
         tableView.reloadData()
     }
+    
+    /// not working
+    @IBAction func didPressDelete(_ sender: UIButton) {
+        if index == 0 {
+            UserDefaults.standard.set([], forKey: "SAVE")
+//            showAlert(title: "DELETED", message: "Saved savings account calculations are deleted")
+            tableView.reloadData()
+
+        } else if index == 1 {
+            print("Delete")
+        } else if index == 2 {
+            UserDefaults.standard.set([], forKey: "LOAN")
+//            showAlert(title: "DELETED", message: "Saved loan account calculations are deleted")
+            tableView.reloadData()
+
+        }
+    }
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{

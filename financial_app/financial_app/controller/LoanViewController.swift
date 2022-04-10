@@ -17,6 +17,11 @@ class LoanViewController: UIViewController {
     @IBOutlet var loanInterestTF: UITextField!
     @IBOutlet var loanAmountTF: UITextField!
     
+    @IBOutlet var calculateBtn: UIButton!
+    @IBOutlet var historyBtn: UIButton!
+    @IBOutlet var saveBtn: UIButton!
+    @IBOutlet var resertBtn: UIButton!
+    
     var textfields: [UITextField] {
         return [loanAmountTF, loanInterestTF, monthlyPaymentTF, noOfPayamentsTF]
     }
@@ -33,6 +38,27 @@ class LoanViewController: UIViewController {
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
         }
+
+    
+    }
+    
+    private func validationTextField() -> Int{
+        var count = 0
+        
+        if !(noOfPayamentsTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(monthlyPaymentTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(loanInterestTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(loanAmountTF.text?.isEmpty)! {
+            count += 1
+        }
+        
+        return count
     }
     
     private func getFirstResponder() -> UITextField {
@@ -77,11 +103,12 @@ class LoanViewController: UIViewController {
     
     
     @IBAction func calculateMissingValue(_ sender: UIButton) {
-        if (loanAmountTF.text != "" && loanInterestTF.text != "" && monthlyPaymentTF.text != "" && noOfPayamentsTF.text != ""){
-            
-            showAlert(title: "WARNING", message: "Keep one field empty for conversion")
-        }else {
+        if (validationTextField() == 0) {
+            showAlert(title: "WARNING", message: "Please fill the fields")
+        } else if (validationTextField() == 3){
             calculation()
+        } else if validationTextField() == 4 {
+            showAlert(title: "WARNING", message: "Keep one field empty for conversion")
         }
         
     }
@@ -94,10 +121,16 @@ class LoanViewController: UIViewController {
     @IBAction func didPressSave(_ sender: Any) {
         print("Save")
         
-        var saveString = "P: \(loanAmountTF.text)\nR: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nNP: \(noOfPayamentsTF.text)"
+        if validationTextField() <= 3 {
+            showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
+        }else if validationTextField() == 4 {
+            var saveString = "P: \(loanAmountTF.text)\nR: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nNP: \(noOfPayamentsTF.text)"
+            
+            print(saveString)
+            saveHistory(saveString: saveString)
+        }
         
-        print(saveString)
-        saveHistory(saveString: saveString)
+        
     }
     
     private func saveHistory(saveString: String) {

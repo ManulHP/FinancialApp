@@ -9,23 +9,47 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func findMissingCompoundresentValue(paymentTimeIsBeginning: Bool, interest: Double, compoundsPerYear: Double, futureValue: Double, noOfYears: Double, paymentValue: Double) -> Double {
+    func findPrincipalAmount(interest: Double, compoundInterest: Double, futureValue: Double, noOfYears: Double, paymentValue: Double) -> Double {
+            var output: Double
+        
+            var interestValue = interest / 100
+            
+            output = (futureValue - (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest)) * (1 + interestValue / compoundInterest)) / pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears)
+            
+            return round(output * 100) / 100
+        }
+    
+    func findFutureValue(principalAmount: Double, interest: Double, compoundInterest: Double, noOfYears: Double, paymentValue: Double) -> Double {
+            var output: Double
            
-//           let FV = Double(futureValue)
-//           let PMT = Double(paymentValue)
-           let I = Double(interest) / 100
-//           let CPY = Double(compoundsPerYear)
-//           let N = Double(noOfYears)
-           
-           var PV: Double
-           
-           if paymentTimeIsBeginning {
-               PV = (futureValue - (paymentValue * (pow((1 + I / compoundsPerYear), compoundsPerYear * noOfYears) - 1) / (I / compoundsPerYear)) * (1 + I / compoundsPerYear)) / pow((1 + I / compoundsPerYear), compoundsPerYear * noOfYears)
-           } else {
-               PV = (futureValue - (paymentValue * (pow((1 + I / compoundsPerYear), compoundsPerYear * noOfYears) - 1) / (I / compoundsPerYear))) / pow((1 + I / compoundsPerYear), compoundsPerYear * noOfYears)
-           }
-           
-           return round(PV * 100) / 100
-           
+            var interestValue = interest / 100
+
+            output = principalAmount * pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) + (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest)) * (1 + interestValue / compoundInterest)
+
+           return round(output * 100) / 100
+
        }
+    
+    func findMonthlyAmount(principalAmount: Double, interest: Double, compoundInterest: Double, futureValue: Double, noOfYears: Double) -> Double {
+            var output: Double
+        
+            var interestValue = interest / 100
+
+        output = futureValue - (principalAmount * pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears)) / ((pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest))
+
+            return round(output * 100) / 100
+
+        }
+    
+    func findNumberOfPayment(principalAmount: Double, interest: Double, compoundInterest: Double, futureValue: Double, paymentValue: Double) -> Double {
+            var output: Double
+        
+            var interestValue = interest / 100
+
+            output = ((log(futureValue + paymentValue + ((paymentValue * compoundInterest) / interestValue)) - log(principalAmount + paymentValue + ((paymentValue * compoundInterest) / interestValue))) / (compoundInterest * log(1 + (interestValue / compoundInterest))))
+
+            return round(output * 100)  / 100
+
+        }
+
 }

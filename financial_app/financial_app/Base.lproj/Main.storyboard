@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Qt-aS-XIs">
-                                <rect key="frame" x="0.0" y="127" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="722"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -49,7 +49,7 @@
                                 </prototypes>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-IF-QLK">
-                                <rect key="frame" x="20" y="88" width="374" height="32"/>
+                                <rect key="frame" x="20" y="106" width="374" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Saving"/>
@@ -64,7 +64,26 @@
                         <viewLayoutGuide key="safeArea" id="gjw-Nm-ZWi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="USa-my-uii"/>
+                    <navigationItem key="navigationItem" id="USa-my-uii">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vQc-f9-gx7">
+                            <view key="customView" contentMode="scaleToFill" id="ODl-Q4-MsG">
+                                <rect key="frame" x="302" y="5.5" width="92" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-e2-f2I">
+                                        <rect key="frame" x="43" y="0.0" width="67" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" imagePlacement="trailing" title="" titleAlignment="trailing"/>
+                                        <connections>
+                                            <action selector="didPressDelete:" destination="Fjd-IU-47E" eventType="touchUpInside" id="Tci-Tg-ylz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="segmentControl" destination="Bvv-IF-QLK" id="qY5-Jr-1VU"/>
                         <outlet property="tableView" destination="8Qt-aS-XIs" id="Rcj-B8-eau"/>
@@ -72,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5P-p2-XK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618.84057971014499" y="1829.4642857142856"/>
+            <point key="canvasLocation" x="-1007.2463768115942" y="1829.4642857142856"/>
         </scene>
         <!--Saving Calculator-->
         <scene sceneID="Ewx-gx-2Ts">
@@ -97,6 +116,9 @@
                                         <rect key="frame" x="105" y="9.5" width="99.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="History"/>
+                                        <connections>
+                                            <segue destination="Fjd-IU-47E" kind="show" id="gPa-oz-TzH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-0X-x6W">
                                         <rect key="frame" x="209.5" y="9.5" width="100" height="31"/>
@@ -264,12 +286,18 @@
                                         <rect key="frame" x="209.5" y="9.5" width="100" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Calculate"/>
+                                        <connections>
+                                            <action selector="didPressCalculate:" destination="3qX-cH-sxr" eventType="touchUpInside" id="jRn-Lu-Bbz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9P-J9-2WA">
                                         <rect key="frame" x="314.5" y="9.5" width="99.5" height="31"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Reset"/>
+                                        <connections>
+                                            <action selector="didPressReset:" destination="3qX-cH-sxr" eventType="touchUpInside" id="ujB-zC-NHM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -558,11 +586,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Loan Calculator" id="wDl-VB-Lmg"/>
                     <connections>
+                        <outlet property="calculateBtn" destination="Dey-1d-acK" id="SIN-Rd-ewM"/>
+                        <outlet property="historyBtn" destination="ESP-tr-GUt" id="ddB-RE-Th9"/>
                         <outlet property="keyboard" destination="QMS-N8-lWW" id="nLf-XK-10B"/>
                         <outlet property="loanAmountTF" destination="wUs-69-gQc" id="SRf-TS-nh0"/>
                         <outlet property="loanInterestTF" destination="z39-lc-gxI" id="iXO-nf-EcI"/>
                         <outlet property="monthlyPaymentTF" destination="jbh-WN-5w6" id="S4Z-ni-AMB"/>
                         <outlet property="noOfPayamentsTF" destination="I3W-XK-Kjp" id="idJ-gz-zs9"/>
+                        <outlet property="resertBtn" destination="Erc-oU-agB" id="kfH-yj-FFd"/>
+                        <outlet property="saveBtn" destination="CB7-xb-vVK" id="bB1-RJ-fSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ye-b1-ME6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -765,6 +797,9 @@
             <point key="canvasLocation" x="1799" y="346"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oZi-FN-8Ls"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="compound" width="1280" height="853"/>
         <image name="l" width="128" height="128"/>
@@ -772,6 +807,7 @@
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="save" width="1200" height="625"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
