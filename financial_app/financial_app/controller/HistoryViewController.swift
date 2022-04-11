@@ -11,9 +11,10 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var loanHistory: [String]?
-    var saveHistory: [String]?
-    var compoundHistory: [String]?
+    var loanHistory = [SaveHistory]()
+    var saveHistory = [SaveHistory]()
+    var compoundHistory = [SaveHistory]()
+    var saveHi: [String]?
     
     @IBOutlet var segmentControl: UISegmentedControl!
     
@@ -22,13 +23,38 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.estimatedRowHeight = 88.0 
+        self.tableView.rowHeight = UITableView.automaticDimension
 
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
-        loanHistory = UserDefaults.standard.array(forKey: "LOAN") as? [String]
         
-        saveHistory = UserDefaults.standard.array(forKey: "SAVE") as? [String]
+        tableView.rowHeight = 100
+        
+        getSaveString()
+    }
+    
+    public func getSaveString(){
+        let saveList = UserDefaults.standard.array(forKey: "SAVE") as? [String]
+        
+        let loanList = UserDefaults.standard.array(forKey: "LOAN") as? [String]
+        
+        for item in saveList! {
+            print(item)
+            let history = SaveHistory(savedString: item)
+            
+            saveHistory += [history]
+        }
+        
+        for item in loanList! {
+            print(item)
+            let history = SaveHistory(savedString: item)
+            
+            loanHistory += [history]
+        }
+        
+        
     }
 
     @IBAction func segmentIndex(_ sender: UISegmentedControl) {
@@ -58,28 +84,31 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if index == 0 {
-            count = saveHistory?.count ?? 0
+            count = saveHistory.count
         } else if index == 1 {
             count = 0
         } else if index == 2 {
-            count = loanHistory?.count  ?? 0
+            count = loanHistory.count
         }
         
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "History")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "History", for: indexPath) as? CustomTableViewCell
         var content = cell?.defaultContentConfiguration()
         if index == 0 {
-            content?.text = saveHistory?[indexPath.row]
+//            content?.text = saveHi?[indexPath.row]
+            
+            cell?.heading.text =  String(saveHistory[indexPath.row].savedString)
         } else if index == 1 {
-            content?.text = loanHistory?[indexPath.row]
+//            content?.text = loanHistory?[indexPath.row]
         } else if index == 2 {
-            content?.text = loanHistory?[indexPath.row]
+            cell?.heading.text =  String(loanHistory[indexPath.row].savedString)
         }
         
-        cell?.contentConfiguration = content
+        
+//        cell?.contentConfiguration = content
         return cell!
     }
     

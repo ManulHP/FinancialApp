@@ -94,7 +94,7 @@ class SavingViewController: UIViewController {
     
    
     @IBAction func didPressSave(_ sender: Any) {
-        var saveString = "Principal Amount: \(principalAmountTF.text)\nInterest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
+        var saveString = "Principal Amount: \(principalAmountTF.text)\n Interest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
         
         print(saveString)
         saveHistory(saveString: saveString)

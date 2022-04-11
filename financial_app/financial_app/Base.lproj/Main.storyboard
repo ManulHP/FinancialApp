@@ -38,13 +38,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="History" id="Z3X-bJ-FyX">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="History" rowHeight="100" id="Z3X-bJ-FyX" customClass="CustomTableViewCell" customModule="financial_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z3X-bJ-FyX" id="eY2-n3-Vpw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvh-wv-UEo">
+                                                    <rect key="frame" x="40" y="11" width="334" height="78"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uvh-wv-UEo" firstAttribute="centerY" secondItem="eY2-n3-Vpw" secondAttribute="centerY" id="YUU-fS-Og1"/>
+                                                <constraint firstItem="uvh-wv-UEo" firstAttribute="top" secondItem="eY2-n3-Vpw" secondAttribute="topMargin" id="atk-ZT-Qvr"/>
+                                                <constraint firstItem="uvh-wv-UEo" firstAttribute="leading" secondItem="eY2-n3-Vpw" secondAttribute="leadingMargin" constant="20" id="bvO-i8-GT9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uvh-wv-UEo" secondAttribute="trailing" constant="20" id="eHF-fo-dbH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uvh-wv-UEo" secondAttribute="bottom" id="xPr-kd-C5X"/>
+                                                <constraint firstItem="uvh-wv-UEo" firstAttribute="centerX" secondItem="eY2-n3-Vpw" secondAttribute="centerX" id="zzR-bg-Ey0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heading" destination="uvh-wv-UEo" id="tqV-rU-OHi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -70,9 +89,8 @@
                                 <rect key="frame" x="302" y="5.5" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-e2-f2I">
-                                        <rect key="frame" x="43" y="0.0" width="67" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-e2-f2I">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="33"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" imagePlacement="trailing" title="" titleAlignment="trailing"/>
                                         <connections>
@@ -81,6 +99,12 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7O8-e2-f2I" secondAttribute="bottom" id="0MU-wg-O7K"/>
+                                    <constraint firstAttribute="trailing" secondItem="7O8-e2-f2I" secondAttribute="trailing" constant="-18" id="IuC-jU-UdW"/>
+                                    <constraint firstItem="7O8-e2-f2I" firstAttribute="leading" secondItem="ODl-Q4-MsG" secondAttribute="leading" id="Qzi-kA-NXE"/>
+                                    <constraint firstItem="7O8-e2-f2I" firstAttribute="top" secondItem="ODl-Q4-MsG" secondAttribute="top" id="hqO-d1-f2S"/>
+                                </constraints>
                             </view>
                         </barButtonItem>
                     </navigationItem>
@@ -807,10 +831,10 @@
         <image name="compound" width="1280" height="853"/>
         <image name="l" width="128" height="128"/>
         <image name="loan" width="970" height="646"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="32" height="32"/>
+        <image name="questionmark.circle" catalog="system" width="32" height="32"/>
         <image name="save" width="1200" height="625"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="trash" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

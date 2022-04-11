@@ -22,6 +22,8 @@ class LoanViewController: UIViewController {
     @IBOutlet var saveBtn: UIButton!
     @IBOutlet var resertBtn: UIButton!
     
+    var saveHistory: [String]?
+    
     var textfields: [UITextField] {
         return [loanAmountTF, loanInterestTF, monthlyPaymentTF, noOfPayamentsTF]
     }
@@ -40,8 +42,24 @@ class LoanViewController: UIViewController {
             textfield.layer.cornerRadius = 10
             textfield.layer.borderWidth = 0.1
         }
-
+        
     
+        asdasd()
+    
+    }
+    
+    private func asdasd() {
+    
+        
+        saveHistory = UserDefaults.standard.array(forKey: "SAVE") as? [String]
+        	
+        if var lastElement = saveHistory?.last {
+            print("Last Element : \(lastElement)")
+            print(lastElement.indices)
+            
+        }
+        
+
     }
     
     private func validationTextField() -> Int{

@@ -26,6 +26,8 @@
 		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
 		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
 		E79A1F0227FF22B200009817 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A1F0127FF22B200009817 /* Saving.swift */; };
+		E7D3683E28035630000AFC21 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3683D28035630000AFC21 /* CustomTableViewCell.swift */; };
+		E7D3684128035964000AFC21 /* SaveHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3684028035964000AFC21 /* SaveHistory.swift */; };
 		E7E477A027FE147F0060B2CB /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4779F27FE147F0060B2CB /* Loan.swift */; };
 		E7F52AA127FE8FC1001697DF /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F52AA027FE8FC1001697DF /* AlertMessage.swift */; };
 		E7FDBE56280013000087FA7A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FDBE55280013000087FA7A /* HistoryViewController.swift */; };
@@ -72,6 +74,8 @@
 		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
 		E79A1F0127FF22B200009817 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
+		E7D3683D28035630000AFC21 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E7D3684028035964000AFC21 /* SaveHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistory.swift; sourceTree = "<group>"; };
 		E7E4779F27FE147F0060B2CB /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		E7F52AA027FE8FC1001697DF /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		E7FDBE55280013000087FA7A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		E767F91C27D7333D00579912 /* financial_app */ = {
 			isa = PBXGroup;
 			children = (
+				E7D3683F28035948000AFC21 /* Model */,
+				E7D3683C280355EA000AFC21 /* TableView */,
 				E791DAB127F9810F00563241 /* Extensions */,
 				E791DAA427F95E1200563241 /* About */,
 				E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */,
@@ -184,6 +190,22 @@
 				E7925B4127F6E94A00DFD177 /* ReusableView.xib */,
 			);
 			path = ReusableKeyboard;
+			sourceTree = "<group>";
+		};
+		E7D3683C280355EA000AFC21 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E7D3683D28035630000AFC21 /* CustomTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E7D3683F28035948000AFC21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7D3684028035964000AFC21 /* SaveHistory.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E7ED176B27E314E70056E449 /* controller */ = {
@@ -331,7 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E767F92227D7333D00579912 /* ViewController.swift in Sources */,
+				E7D3684128035964000AFC21 /* SaveHistory.swift in Sources */,
 				E7E477A027FE147F0060B2CB /* Loan.swift in Sources */,
+				E7D3683E28035630000AFC21 /* CustomTableViewCell.swift in Sources */,
 				E791DAA627F95E3500563241 /* About.swift in Sources */,
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
 				E791DAA827F95E9100563241 /* AboutViewController.swift in Sources */,
