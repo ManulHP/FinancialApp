@@ -100,6 +100,20 @@ class CompoundSavingViewController: UIViewController {
         
     }
     
+    private func saveHistory(saveString: String) {
+        if var saveValue = UserDefaults.standard.array(forKey: "COMPOUND") as? [String] {
+            if saveValue.count > 7 {
+                _ = saveValue.removeFirst()
+            }
+            saveValue.append(saveString)
+            UserDefaults.standard.set(saveValue, forKey: "COMPOUND")
+        } else {
+            UserDefaults.standard.set([saveString], forKey: "COMPOUND")
+        }
+        
+        showAlert(title: "Successful", message: "Data entered are saved")
+
+    }
     
     @IBAction func didPressReset(_ sender: Any) {
         resetTf()
@@ -112,6 +126,18 @@ class CompoundSavingViewController: UIViewController {
             calculateCompoundSaving()
         } else if validationTextField() == 5 {
             showAlert(title: "WARNING", message: "Keep one field empty for conversion")
+        }
+    }
+    
+    
+    @IBAction func didPressSave(_ sender: UIButton) {
+        if validationTextField() <= 3 {
+            showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
+        }else if validationTextField() == 4 {
+            var saveString = "Principal Amount: \(principalAmountTF.text)\n Interest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)\nMonthly Payments: \(monthlyPaymentTF.text)"
+            
+            print(saveString)
+            saveHistory(saveString: saveString)
         }
     }
     

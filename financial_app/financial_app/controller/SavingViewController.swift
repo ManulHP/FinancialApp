@@ -37,6 +37,25 @@ class SavingViewController: UIViewController {
 
     }
     
+    private func validationTextField() -> Int{
+        var count = 0
+        
+        if !(principalAmountTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(interestTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(futureValueTF.text?.isEmpty)! {
+            count += 1
+        }
+        if !(noOfPaymentsTF.text?.isEmpty)! {
+            count += 1
+        }
+        
+        return count
+    }
+    
     private func getFirstResponder() -> UITextField {
         let textfieldRespond = textfields.filter { fResponder in
             return fResponder.isFirstResponder
@@ -94,14 +113,26 @@ class SavingViewController: UIViewController {
     
    
     @IBAction func didPressSave(_ sender: Any) {
-        var saveString = "Principal Amount: \(principalAmountTF.text)\n Interest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
+        if validationTextField() <= 3 {
+            showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
+        }else if validationTextField() == 4 {
+            var saveString = "Principal Amount: \(principalAmountTF.text)\n Interest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
+            
+            print(saveString)
+            saveHistory(saveString: saveString)
+        }
         
-        print(saveString)
-        saveHistory(saveString: saveString)
     }
     
     @IBAction func calculateMissingValue(_ sender: Any) {
-        calculateSaving()
+        if (validationTextField() == 0) {
+            showAlert(title: "WARNING", message: "Please fill the fields")
+        } else if (validationTextField() == 3){
+            calculateSaving()
+        } else if validationTextField() == 4 {
+            showAlert(title: "WARNING", message: "Keep one field empty for conversion")
+        }
+        
     }
     
     @IBAction func resetBtn(_ sender: Any) {

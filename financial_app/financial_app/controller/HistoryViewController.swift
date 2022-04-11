@@ -14,7 +14,7 @@ class HistoryViewController: UIViewController {
     var loanHistory = [SaveHistory]()
     var saveHistory = [SaveHistory]()
     var compoundHistory = [SaveHistory]()
-    var saveHi: [String]?
+
     
     @IBOutlet var segmentControl: UISegmentedControl!
     
@@ -40,6 +40,8 @@ class HistoryViewController: UIViewController {
         
         let loanList = UserDefaults.standard.array(forKey: "LOAN") as? [String]
         
+        let compundList = UserDefaults.standard.array(forKey: "COMPOUND") as? [String]
+        
         for item in saveList! {
             print(item)
             let history = SaveHistory(savedString: item)
@@ -52,6 +54,13 @@ class HistoryViewController: UIViewController {
             let history = SaveHistory(savedString: item)
             
             loanHistory += [history]
+        }
+        
+        for item in compundList! {
+            print(item)
+            let history = SaveHistory(savedString: item)
+            
+            compoundHistory += [history]
         }
         
         
@@ -86,7 +95,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
         if index == 0 {
             count = saveHistory.count
         } else if index == 1 {
-            count = 0
+            count = compoundHistory.count
         } else if index == 2 {
             count = loanHistory.count
         }
@@ -98,11 +107,9 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "History", for: indexPath) as? CustomTableViewCell
         var content = cell?.defaultContentConfiguration()
         if index == 0 {
-//            content?.text = saveHi?[indexPath.row]
-            
             cell?.heading.text =  String(saveHistory[indexPath.row].savedString)
         } else if index == 1 {
-//            content?.text = loanHistory?[indexPath.row]
+            cell?.heading.text =  String(compoundHistory[indexPath.row].savedString)
         } else if index == 2 {
             cell?.heading.text =  String(loanHistory[indexPath.row].savedString)
         }

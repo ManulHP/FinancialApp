@@ -44,23 +44,11 @@ class LoanViewController: UIViewController {
         }
         
     
-        asdasd()
+    
     
     }
     
-    private func asdasd() {
-    
-        
-        saveHistory = UserDefaults.standard.array(forKey: "SAVE") as? [String]
-        	
-        if var lastElement = saveHistory?.last {
-            print("Last Element : \(lastElement)")
-            print(lastElement.indices)
-            
-        }
-        
 
-    }
     
     private func validationTextField() -> Int{
         var count = 0

@@ -51,6 +51,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atu-bU-KC2">
+                                                    <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uvh-wv-UEo" firstAttribute="centerY" secondItem="eY2-n3-Vpw" secondAttribute="centerY" id="YUU-fS-Og1"/>
@@ -115,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5P-p2-XK6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007.2463768115942" y="1829.4642857142856"/>
+            <point key="canvasLocation" x="-238" y="1785"/>
         </scene>
         <!--Saving Calculator-->
         <scene sceneID="Ewx-gx-2Ts">
@@ -300,11 +307,17 @@
                                         <rect key="frame" x="0.0" y="9.5" width="100" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                        <connections>
+                                            <action selector="didPressSave:" destination="3qX-cH-sxr" eventType="touchUpInside" id="8rD-5A-7zg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-TE-DAh">
                                         <rect key="frame" x="105" y="9.5" width="99.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="History"/>
+                                        <connections>
+                                            <segue destination="Fjd-IU-47E" kind="show" id="wlX-bZ-wIM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohq-Nn-tLj">
                                         <rect key="frame" x="209.5" y="9.5" width="100" height="31"/>
@@ -825,7 +838,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oZi-FN-8Ls"/>
+        <segue reference="wlX-bZ-wIM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="compound" width="1280" height="853"/>
