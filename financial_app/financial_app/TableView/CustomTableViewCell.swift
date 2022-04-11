@@ -10,6 +10,7 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet var heading: UILabel!
+    @IBOutlet var subheading: UILabel!
     
     override func layoutSubviews() {
            super.layoutSubviews()

@@ -132,7 +132,7 @@ class LoanViewController: UIViewController {
         if validationTextField() <= 3 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
         }else if validationTextField() == 4 {
-            var saveString = "P: \(loanAmountTF.text)\nR: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nNP: \(noOfPayamentsTF.text)"
+            var saveString = "P: \(loanAmountTF.text)\nI: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nN: \(noOfPayamentsTF.text)"
             
             print(saveString)
             saveHistory(saveString: saveString)

@@ -116,7 +116,7 @@ class SavingViewController: UIViewController {
         if validationTextField() <= 3 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
         }else if validationTextField() == 4 {
-            var saveString = "Principal Amount: \(principalAmountTF.text)\n Interest: \(interestTF.text)\nFuture Value: \(futureValueTF.text)\nNumber of Payments: \(noOfPaymentsTF.text)"
+            var saveString = "P: \(principalAmountTF.text)\n I: \(interestTF.text)\nF: \(futureValueTF.text)\nN: \(noOfPaymentsTF.text)"
             
             print(saveString)
             saveHistory(saveString: saveString)

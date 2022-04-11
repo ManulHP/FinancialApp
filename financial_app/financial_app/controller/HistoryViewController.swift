@@ -108,10 +108,14 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
         var content = cell?.defaultContentConfiguration()
         if index == 0 {
             cell?.heading.text =  String(saveHistory[indexPath.row].savedString)
+            cell?.subheading.text = "P - Present Value I - Interest F - Future Value N - No. of Payments"
         } else if index == 1 {
             cell?.heading.text =  String(compoundHistory[indexPath.row].savedString)
+            cell?.subheading.text = "P - Present Value I - Interest PMT - Payment N - No. of Payments"
+            cell?.subheading.text = "P - Present Value I - Interest PMT - Payment N - No. of Payments F - Future Value"
         } else if index == 2 {
             cell?.heading.text =  String(loanHistory[indexPath.row].savedString)
+            cell?.subheading.text = "P - Present Value I - Interest PMT - Payment N - No. of Payments"
         }
         
         
