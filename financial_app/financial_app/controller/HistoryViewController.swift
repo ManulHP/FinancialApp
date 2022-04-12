@@ -29,6 +29,7 @@ class HistoryViewController: UIViewController {
         getSaveString()
     }
     
+    /// gets the data from stored in th
     public func getSaveString(){
         let saveList = UserDefaults.standard.array(forKey: "SAVE") as? [String]
         let loanList = UserDefaults.standard.array(forKey: "LOAN") as? [String]
