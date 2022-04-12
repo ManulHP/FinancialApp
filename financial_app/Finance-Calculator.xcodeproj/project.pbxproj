@@ -288,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E767F91527D7333D00579912 /* Build configuration list for PBXProject "financial_app" */;
+			buildConfigurationList = E767F91527D7333D00579912 /* Build configuration list for PBXProject "Finance-Calculator" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -659,7 +659,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E767F91527D7333D00579912 /* Build configuration list for PBXProject "financial_app" */ = {
+		E767F91527D7333D00579912 /* Build configuration list for PBXProject "Finance-Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E767F94227D7333E00579912 /* Debug */,

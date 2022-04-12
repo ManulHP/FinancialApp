@@ -40,7 +40,6 @@ extension UIViewController {
     /// calculates the loan interest amount
     func calMissingLoanInterest(loanAmount: Double, noOfPay: Double, monthlyPayment: Double) -> Double {
         let I = (monthlyPayment * (pow(monthlyPayment / loanAmount, (1 / (monthlyPayment * noOfPay))) - 1))
-    
         return round(I*100) / 100
     }
     

@@ -152,8 +152,8 @@ class LoanViewController: UIViewController {
     
     
     @IBAction func calculateMissingValue(_ sender: UIButton) {
-        if (validationTextField() == 0) {
-            showAlert(title: "WARNING", message: "Please fill the fields")
+        if (validationTextField() < 3) {
+            showAlert(title: "WARNING", message: "Please fill 3 fields to continue")
         } else if (validationTextField() == 3){
             calculation()
         } else if validationTextField() == 4 {

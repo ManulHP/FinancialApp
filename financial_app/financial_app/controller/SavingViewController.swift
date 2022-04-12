@@ -173,8 +173,8 @@ class SavingViewController: UIViewController {
     
     /// calculate button
     @IBAction func calculateMissingValue(_ sender: Any) {
-        if (validationTextField() == 0) {
-            showAlert(title: "WARNING", message: "Please fill the fields")
+        if (validationTextField() < 3) {
+            showAlert(title: "WARNING", message: "Please fill 3 fields to continue")
         } else if (validationTextField() == 3){
             calculateSaving()
         } else if validationTextField() == 4 {

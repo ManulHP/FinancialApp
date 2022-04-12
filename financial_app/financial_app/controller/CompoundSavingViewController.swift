@@ -140,6 +140,9 @@ class CompoundSavingViewController: UIViewController {
         }else if (noOfPaymentsTF.text?.isEmpty)! {
             missingValue = findNumberOfPayment(principalAmount: PRINCIPAL_AMOUNT!, interest: INTEREST!, compoundInterest: COMPOUND_INTEREST, futureValue: FUTURE_VALUE!, paymentValue: MONTHLY_PAYMENT!)
             noOfPaymentsTF.text = String(missingValue)
+        }else if (interestTF.text?.isEmpty)! {
+            showAlert(title: "Failed", message: "Interest calculations havent yet implemented")
+            interestTF.text = String(missingValue)
         }
         
         UserDefaults.standard.set(principalAmountTF.text, forKey: "AmountCompound") as? String
@@ -171,8 +174,8 @@ class CompoundSavingViewController: UIViewController {
     
     /// calculate button
     @IBAction func didPressCalculate(_ sender: UIButton) {
-        if (validationTextField() == 0) {
-            showAlert(title: "WARNING", message: "Please fill the fields")
+        if (validationTextField() < 4) {
+            showAlert(title: "WARNING", message: "Please fill 4 fields to continue")
         } else if (validationTextField() == 4){
             calculateCompoundSaving()
         } else if validationTextField() == 5 {
@@ -182,7 +185,7 @@ class CompoundSavingViewController: UIViewController {
     
     /// save button
     @IBAction func didPressSave(_ sender: UIButton) {
-        if validationTextField() <= 3 {
+        if validationTextField() <= 4 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
         }else if validationTextField() == 5 {
             var saveString = "P: \(principalAmountTF.text)\n I: \(interestTF.text)\nF: \(futureValueTF.text)\nN: \(noOfPaymentsTF.text)\nPMT: \(monthlyPaymentTF.text)"

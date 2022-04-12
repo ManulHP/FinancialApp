@@ -96,31 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="gjw-Nm-ZWi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="USa-my-uii">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="vQc-f9-gx7">
-                            <view key="customView" contentMode="scaleToFill" id="ODl-Q4-MsG">
-                                <rect key="frame" x="302" y="5.5" width="92" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-e2-f2I">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="33"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" imagePlacement="trailing" title="" titleAlignment="trailing"/>
-                                        <connections>
-                                            <action selector="didPressDelete:" destination="Fjd-IU-47E" eventType="touchUpInside" id="Tci-Tg-ylz"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7O8-e2-f2I" secondAttribute="bottom" id="0MU-wg-O7K"/>
-                                    <constraint firstAttribute="trailing" secondItem="7O8-e2-f2I" secondAttribute="trailing" constant="-18" id="IuC-jU-UdW"/>
-                                    <constraint firstItem="7O8-e2-f2I" firstAttribute="leading" secondItem="ODl-Q4-MsG" secondAttribute="leading" id="Qzi-kA-NXE"/>
-                                    <constraint firstItem="7O8-e2-f2I" firstAttribute="top" secondItem="ODl-Q4-MsG" secondAttribute="top" id="hqO-d1-f2S"/>
-                                </constraints>
-                            </view>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="USa-my-uii"/>
                     <connections>
                         <outlet property="segmentControl" destination="Bvv-IF-QLK" id="qY5-Jr-1VU"/>
                         <outlet property="tableView" destination="8Qt-aS-XIs" id="Rcj-B8-eau"/>
@@ -905,7 +881,6 @@
         <image name="pencil.slash" catalog="system" width="128" height="113"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="save" width="1200" height="625"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
