@@ -136,8 +136,9 @@ class LoanViewController: UIViewController {
             missingValue = calMissingNoOfPayment(interest: R!, loanAmount: P!, monthlyPayment: PMT!)
             noOfPayamentsTF.text = String(missingValue)
         }else if (loanInterestTF.text?.isEmpty)! {
-            missingValue = calMissingLoanInterest(loanAmount:P!, monthlyPayment: PMT!, noOfPayment: NP!)
+            missingValue = calMissingLoanInterest(loanAmount: P!, noOfPay: NP!, monthlyPayment: PMT!)
             loanInterestTF.text = String(missingValue)
+           
         }
         
         UserDefaults.standard.set(loanAmountTF.text, forKey: "Amount") as? String

@@ -34,6 +34,41 @@ class CompoundSavingViewController: UIViewController {
             textfield.layer.cornerRadius = 10
             textfield.layer.borderWidth = 0.1
         }
+        
+        if let value = UserDefaults.standard.value(forKey: "AmountCompound") as? String{
+            if value != nil {
+                principalAmountTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "NoPaymentsCompound") as? String{
+            if value != nil {
+                noOfPaymentsTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "PaymentCompound") as? String{
+            if value != nil {
+                monthlyPaymentTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "InterestCompound") as? String{
+            if value != nil {
+                interestTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "FutureCompound") as? String{
+            if value != nil {
+                futureValueTF.text = value
+            }
+            print(value)
+        }
     }
     
     private func getFirstResponder() -> UITextField {
@@ -97,6 +132,12 @@ class CompoundSavingViewController: UIViewController {
             missingValue = findNumberOfPayment(principalAmount: PRINCIPAL_AMOUNT!, interest: INTEREST!, compoundInterest: COMPOUND_INTEREST, futureValue: FUTURE_VALUE!, paymentValue: MONTHLY_PAYMENT!)
             noOfPaymentsTF.text = String(missingValue)
         }
+        
+        UserDefaults.standard.set(principalAmountTF.text, forKey: "AmountCompound") as? String
+        UserDefaults.standard.set(interestTF.text, forKey: "InterestCompound") as? String
+        UserDefaults.standard.set(monthlyPaymentTF.text, forKey: "PaymentCompound") as? String
+        UserDefaults.standard.set(noOfPaymentsTF.text, forKey: "NoPaymentsCompound") as? String
+        UserDefaults.standard.set(futureValueTF.text, forKey: "FutureCompound") as? String
         
     }
     

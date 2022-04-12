@@ -14,7 +14,7 @@ extension UIViewController {
         
             var interestValue = interest / 100
             
-            output = (futureValue - (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest)) * (1 + interestValue / compoundInterest)) / pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears)
+            output = (futureValue - (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest))) / pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears)
             
             return round(output * 100) / 100
         }
@@ -24,7 +24,7 @@ extension UIViewController {
            
             var interestValue = interest / 100
 
-            output = principalAmount * pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) + (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest)) * (1 + interestValue / compoundInterest)
+            output = principalAmount * pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) + (paymentValue * (pow((1 + interestValue / compoundInterest), compoundInterest * noOfYears) - 1) / (interestValue / compoundInterest))
 
            return round(output * 100) / 100
 
@@ -46,7 +46,7 @@ extension UIViewController {
         
             var interestValue = interest / 100
 
-            output = ((log(futureValue + paymentValue + ((paymentValue * compoundInterest) / interestValue)) - log(principalAmount + paymentValue + ((paymentValue * compoundInterest) / interestValue))) / (compoundInterest * log(1 + (interestValue / compoundInterest))))
+            output = (log(futureValue + ((paymentValue * compoundInterest) / interestValue)) - log(((interestValue * principalAmount) + (paymentValue * compoundInterest)) / interestValue)) / (compoundInterest * log(1 + (interestValue / compoundInterest)))
 
             return round(output * 100)  / 100
 

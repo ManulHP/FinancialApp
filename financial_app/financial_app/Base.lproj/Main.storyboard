@@ -692,17 +692,24 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zph-gY-qLe">
                                                 <rect key="frame" x="0.0" y="258" width="374" height="250"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compound" translatesAutoresizingMaskIntoConstraints="NO" id="MGN-nh-cYJ">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compound" translatesAutoresizingMaskIntoConstraints="NO" id="MGN-nh-cYJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-zC-baR">
-                                                        <rect key="frame" x="69.5" y="111" width="235" height="28"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M4h-ei-Ba8">
+                                                        <rect key="frame" x="8" y="91" width="358" height="88"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">Compound interest (or compounding interest) is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods.</string>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-zC-baR">
+                                                        <rect key="frame" x="8" y="0.0" width="358" height="102"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="COMPOUND SAVING">
                                                                 <attributes>
                                                                     <font key="NSFont" size="24" name="Arial-Black"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -711,9 +718,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="centerX" secondItem="Zph-gY-qLe" secondAttribute="centerX" id="U2d-8b-p72"/>
-                                                    <constraint firstAttribute="height" constant="250" id="shp-XZ-Qqc"/>
-                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="centerY" secondItem="Zph-gY-qLe" secondAttribute="centerY" id="uOE-zb-OHt"/>
+                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="centerX" secondItem="Zph-gY-qLe" secondAttribute="centerX" id="3hO-mC-MeQ"/>
+                                                    <constraint firstItem="MGN-nh-cYJ" firstAttribute="top" secondItem="Zph-gY-qLe" secondAttribute="top" id="C4y-vl-lsY"/>
+                                                    <constraint firstItem="MGN-nh-cYJ" firstAttribute="leading" secondItem="Zph-gY-qLe" secondAttribute="leading" id="V8N-F0-Dvr"/>
+                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="centerX" secondItem="MGN-nh-cYJ" secondAttribute="centerX" id="YBq-Np-MXt"/>
+                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="top" secondItem="Zph-gY-qLe" secondAttribute="top" constant="30" id="gkZ-5X-lQa"/>
+                                                    <constraint firstItem="P2e-zC-baR" firstAttribute="leading" secondItem="Zph-gY-qLe" secondAttribute="leading" constant="70" id="ieU-gS-u0B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MGN-nh-cYJ" secondAttribute="bottom" id="tnN-6u-wgr"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-WQ-2Gc">
@@ -854,6 +865,9 @@
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="save" width="1200" height="625"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
