@@ -27,7 +27,7 @@ class CompoundSavingViewController: UIViewController {
         
         keyboard.delegate = self
 
-        // Do any additional setup after loading the view.
+        /// disable the default keyboard
         textfields.forEach { textfield in
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
@@ -35,6 +35,7 @@ class CompoundSavingViewController: UIViewController {
             textfield.layer.borderWidth = 0.1
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "AmountCompound") as? String{
             if value != nil {
                 principalAmountTF.text = value
@@ -42,6 +43,7 @@ class CompoundSavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "NoPaymentsCompound") as? String{
             if value != nil {
                 noOfPaymentsTF.text = value
@@ -49,6 +51,7 @@ class CompoundSavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "PaymentCompound") as? String{
             if value != nil {
                 monthlyPaymentTF.text = value
@@ -56,6 +59,7 @@ class CompoundSavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "InterestCompound") as? String{
             if value != nil {
                 interestTF.text = value
@@ -63,6 +67,7 @@ class CompoundSavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "FutureCompound") as? String{
             if value != nil {
                 futureValueTF.text = value
@@ -71,6 +76,7 @@ class CompoundSavingViewController: UIViewController {
         }
     }
     
+    /// getting the first responder
     private func getFirstResponder() -> UITextField {
         let textfieldRespond = textfields.filter { fResponder in
             return fResponder.isFirstResponder
@@ -79,6 +85,7 @@ class CompoundSavingViewController: UIViewController {
         return textfieldRespond
     }
     
+    /// checks whether how many textfields are not empty
     private func validationTextField() -> Int{
         var count = 0
         
@@ -101,6 +108,7 @@ class CompoundSavingViewController: UIViewController {
         return count
     }
     
+    /// resets the values to a empty string
     private func resetTf() {
         principalAmountTF.text = ""
         futureValueTF.text = ""
@@ -109,6 +117,7 @@ class CompoundSavingViewController: UIViewController {
         noOfPaymentsTF.text = ""
     }
     
+    /// calculates the missing values
     private func calculateCompoundSaving() {
         let PRINCIPAL_AMOUNT = Double(principalAmountTF.text!)
         let INTEREST = Double(interestTF.text!)
@@ -155,11 +164,12 @@ class CompoundSavingViewController: UIViewController {
         showAlert(title: "Successful", message: "Data entered are saved")
 
     }
-    
+     /// reset button
     @IBAction func didPressReset(_ sender: Any) {
         resetTf()
     }
     
+    /// calculate button
     @IBAction func didPressCalculate(_ sender: UIButton) {
         if (validationTextField() == 0) {
             showAlert(title: "WARNING", message: "Please fill the fields")
@@ -170,7 +180,7 @@ class CompoundSavingViewController: UIViewController {
         }
     }
     
-    
+    /// save button
     @IBAction func didPressSave(_ sender: UIButton) {
         if validationTextField() <= 3 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
@@ -184,6 +194,7 @@ class CompoundSavingViewController: UIViewController {
     
 }
 
+/// reusable keyboard
 extension CompoundSavingViewController: ReusableProtocol {
     func didPressDecemial(_ value: String) {
         print(".")

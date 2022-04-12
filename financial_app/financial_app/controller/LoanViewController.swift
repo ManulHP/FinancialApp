@@ -23,7 +23,6 @@ class LoanViewController: UIViewController {
     @IBOutlet var resertBtn: UIButton!
     
     var saveHistory: [String]?
-    var items: [LoanModel] = []
     
     var textfields: [UITextField] {
         return [loanAmountTF, loanInterestTF, monthlyPaymentTF, noOfPayamentsTF]
@@ -44,6 +43,7 @@ class LoanViewController: UIViewController {
             textfield.layer.borderWidth = 0.1
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "Amount") as? String{
             if value != nil {
                 loanAmountTF.text = value
@@ -51,6 +51,7 @@ class LoanViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "NoPayments") as? String{
             if value != nil {
                 noOfPayamentsTF.text = value
@@ -58,6 +59,7 @@ class LoanViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "Payment") as? String{
             if value != nil {
                 monthlyPaymentTF.text = value
@@ -65,6 +67,7 @@ class LoanViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "Interest") as? String{
             if value != nil {
                 loanInterestTF.text = value

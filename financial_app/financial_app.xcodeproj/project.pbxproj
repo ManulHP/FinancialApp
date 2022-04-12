@@ -20,13 +20,11 @@
 		E7886F7327F85C3500330253 /* SavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7227F85C3500330253 /* SavingViewController.swift */; };
 		E7886F7527F85C5C00330253 /* CompoundSavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */; };
 		E7886F7727F85C7400330253 /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7886F7627F85C7400330253 /* LoanViewController.swift */; };
-		E791DAA627F95E3500563241 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791DAA527F95E3500563241 /* About.swift */; };
 		E791DAA827F95E9100563241 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791DAA727F95E9100563241 /* AboutViewController.swift */; };
 		E791DAB327F9812500563241 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791DAB227F9812500563241 /* Extensions.swift */; };
 		E7925B4027F6E7EE00DFD177 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */; };
 		E7925B4227F6E94A00DFD177 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7925B4127F6E94A00DFD177 /* ReusableView.xib */; };
 		E79A1F0227FF22B200009817 /* Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A1F0127FF22B200009817 /* Saving.swift */; };
-		E7AB16F5280471D8000AFD34 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB16F4280471D8000AFD34 /* LoanModel.swift */; };
 		E7D3683E28035630000AFC21 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3683D28035630000AFC21 /* CustomTableViewCell.swift */; };
 		E7D3684128035964000AFC21 /* SaveHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3684028035964000AFC21 /* SaveHistory.swift */; };
 		E7E477A027FE147F0060B2CB /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4779F27FE147F0060B2CB /* Loan.swift */; };
@@ -69,13 +67,11 @@
 		E7886F7227F85C3500330253 /* SavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingViewController.swift; sourceTree = "<group>"; };
 		E7886F7427F85C5C00330253 /* CompoundSavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundSavingViewController.swift; sourceTree = "<group>"; };
 		E7886F7627F85C7400330253 /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
-		E791DAA527F95E3500563241 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		E791DAA727F95E9100563241 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E791DAB227F9812500563241 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E7925B3F27F6E7EE00DFD177 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E7925B4127F6E94A00DFD177 /* ReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
 		E79A1F0127FF22B200009817 /* Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saving.swift; sourceTree = "<group>"; };
-		E7AB16F4280471D8000AFD34 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
 		E7D3683D28035630000AFC21 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E7D3684028035964000AFC21 /* SaveHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistory.swift; sourceTree = "<group>"; };
 		E7E4779F27FE147F0060B2CB /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
@@ -134,7 +130,6 @@
 				E7D3683F28035948000AFC21 /* Model */,
 				E7D3683C280355EA000AFC21 /* TableView */,
 				E791DAB127F9810F00563241 /* Extensions */,
-				E791DAA427F95E1200563241 /* About */,
 				E7925B3E27F6E7CA00DFD177 /* ReusableKeyboard */,
 				E7ED176B27E314E70056E449 /* controller */,
 				E767F91D27D7333D00579912 /* AppDelegate.swift */,
@@ -163,14 +158,6 @@
 				E767F94027D7333E00579912 /* financial_appUITestsLaunchTests.swift */,
 			);
 			path = financial_appUITests;
-			sourceTree = "<group>";
-		};
-		E791DAA427F95E1200563241 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				E791DAA527F95E3500563241 /* About.swift */,
-			);
-			path = About;
 			sourceTree = "<group>";
 		};
 		E791DAB127F9810F00563241 /* Extensions */ = {
@@ -206,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				E7D3684028035964000AFC21 /* SaveHistory.swift */,
-				E7AB16F4280471D8000AFD34 /* LoanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,7 +345,6 @@
 				E7D3684128035964000AFC21 /* SaveHistory.swift in Sources */,
 				E7E477A027FE147F0060B2CB /* Loan.swift in Sources */,
 				E7D3683E28035630000AFC21 /* CustomTableViewCell.swift in Sources */,
-				E791DAA627F95E3500563241 /* About.swift in Sources */,
 				E767F91E27D7333D00579912 /* AppDelegate.swift in Sources */,
 				E791DAA827F95E9100563241 /* AboutViewController.swift in Sources */,
 				E7FDBE56280013000087FA7A /* HistoryViewController.swift in Sources */,
@@ -370,7 +355,6 @@
 				E767F92027D7333D00579912 /* SceneDelegate.swift in Sources */,
 				E7F52AA127FE8FC1001697DF /* AlertMessage.swift in Sources */,
 				E7886F7527F85C5C00330253 /* CompoundSavingViewController.swift in Sources */,
-				E7AB16F5280471D8000AFD34 /* LoanModel.swift in Sources */,
 				E74096BB280153E70033F3DB /* Compound.swift in Sources */,
 				E79A1F0227FF22B200009817 /* Saving.swift in Sources */,
 			);

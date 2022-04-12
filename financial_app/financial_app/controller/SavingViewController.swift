@@ -24,10 +24,12 @@ class SavingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /// Displays a alert message
         showAlert(title: "WARNING", message: "Please keep one field empty to get the results")
 
         keyboard.delegate = self
         
+        /// hides the default keyboard wthen the board in active
         textfields.forEach { textfield in
             textfield.inputView = UIView()
             textfield.inputAccessoryView = UIView()
@@ -35,6 +37,7 @@ class SavingViewController: UIViewController {
             textfield.layer.borderWidth = 0.1
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "AmountSave") as? String{
             if value != nil {
                 principalAmountTF.text = value
@@ -42,6 +45,7 @@ class SavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "NoPaymentsSave") as? String{
             if value != nil {
                 noOfPaymentsTF.text = value
@@ -49,6 +53,7 @@ class SavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "PaymentSave") as? String{
             if value != nil {
                 futureValueTF.text = value
@@ -56,6 +61,7 @@ class SavingViewController: UIViewController {
             print(value)
         }
         
+        /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
         if let value = UserDefaults.standard.value(forKey: "InterestSave") as? String{
             if value != nil {
                 interestTF.text = value
@@ -65,6 +71,7 @@ class SavingViewController: UIViewController {
 
     }
     
+    /// checks whether how many textfields are not empty
     private func validationTextField() -> Int{
         var count = 0
         
@@ -84,6 +91,7 @@ class SavingViewController: UIViewController {
         return count
     }
     
+    /// get's the first responder as a textfield
     private func getFirstResponder() -> UITextField {
         let textfieldRespond = textfields.filter { fResponder in
             return fResponder.isFirstResponder
@@ -92,6 +100,7 @@ class SavingViewController: UIViewController {
         return textfieldRespond
     }
     
+    /// resets the values to a empty string
     private func resetTf() {
         noOfPaymentsTF.text = ""
         futureValueTF.text = ""
@@ -99,16 +108,18 @@ class SavingViewController: UIViewController {
         principalAmountTF.text = ""
     }
     
+    /// calculates the missing values
     private func calculateSaving() {
-        let P = Double(principalAmountTF.text!)
-        let I = Double(interestTF.text!)
-        let FV = Double(futureValueTF.text!)
-        let NP = Double(noOfPaymentsTF.text!)
+        let P = Double(principalAmountTF.text!) /// present amount field data
+        let I = Double(interestTF.text!) /// interest  field data
+        let FV = Double(futureValueTF.text!) /// future value field data
+        let NP = Double(noOfPaymentsTF.text!) /// number of payment field data
         let CI = Double(12)
         
         var missingValue = 0.0
         
         if (interestTF.text?.isEmpty)! {
+            /// assigns the return missing interest value to the missingValue variable and then its assign to the relevent text field
             missingValue = findMissingInterest(presentValue: P!, compoundsPerYear: CI, futureValue: FV!, noOfYears: NP!)
             interestTF.text = String(missingValue)
         } else if (futureValueTF.text?.isEmpty)! {
@@ -129,7 +140,9 @@ class SavingViewController: UIViewController {
         
     }
     
+    /// history page
     private func saveHistory(saveString: String) {
+        /// save the data locally
         if var saveValue = UserDefaults.standard.array(forKey: "SAVE") as? [String] {
             if saveValue.count > 7 {
                 _ = saveValue.removeFirst()
@@ -140,11 +153,12 @@ class SavingViewController: UIViewController {
             UserDefaults.standard.set([saveString], forKey: "SAVE")
         }
         
+        /// showing a error message
         showAlert(title: "Successful", message: "Data entered are saved")
 
     }
     
-   
+    /// save button
     @IBAction func didPressSave(_ sender: Any) {
         if validationTextField() <= 3 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
@@ -157,6 +171,7 @@ class SavingViewController: UIViewController {
         
     }
     
+    /// calculate button
     @IBAction func calculateMissingValue(_ sender: Any) {
         if (validationTextField() == 0) {
             showAlert(title: "WARNING", message: "Please fill the fields")
@@ -168,6 +183,7 @@ class SavingViewController: UIViewController {
         
     }
     
+    ///reset button
     @IBAction func resetBtn(_ sender: Any) {
         resetTf()
     }
@@ -175,6 +191,7 @@ class SavingViewController: UIViewController {
 
 }
 
+/// reusable keyboard
 extension SavingViewController: ReusableProtocol {
     func didPressDecemial(_ value: String) {
         print(".")

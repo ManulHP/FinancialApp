@@ -20,6 +20,7 @@ class HistoryViewController: UIViewController {
         self.tableView.estimatedRowHeight = 88.0
         self.tableView.rowHeight = UITableView.automaticDimension
 
+        /// tableview
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -30,9 +31,7 @@ class HistoryViewController: UIViewController {
     
     public func getSaveString(){
         let saveList = UserDefaults.standard.array(forKey: "SAVE") as? [String]
-        
         let loanList = UserDefaults.standard.array(forKey: "LOAN") as? [String]
-        
         let compundList = UserDefaults.standard.array(forKey: "COMPOUND") as? [String]
         
         if saveList?.count ?? 0 > 0 {

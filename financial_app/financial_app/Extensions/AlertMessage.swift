@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Alert message box whether the title and description can be added when callijng the methos
 extension UIViewController {
     func showAlert(title: String, message: String) {
         let alertBox = UIAlertController(title: title, message: message,preferredStyle: UIAlertController.Style.alert)

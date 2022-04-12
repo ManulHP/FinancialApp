@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Used for the reusable keyboard
 extension UIView {
     /// Loads the UIView from the XIB (Nib is the more popular name. It stems from Swifts predecessor -- Objective-C)
     /// - Parameter nibName: Name of the XIB/Nib in string
