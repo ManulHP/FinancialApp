@@ -133,7 +133,7 @@ class CompoundSavingViewController: UIViewController {
     @IBAction func didPressSave(_ sender: UIButton) {
         if validationTextField() <= 3 {
             showAlert(title: "WARNING", message: "Can't save the data because all 4 fields needs to be filled")
-        }else if validationTextField() == 4 {
+        }else if validationTextField() == 5 {
             var saveString = "P: \(principalAmountTF.text)\n I: \(interestTF.text)\nF: \(futureValueTF.text)\nN: \(noOfPaymentsTF.text)\nPMT: \(monthlyPaymentTF.text)"
             
             print(saveString)

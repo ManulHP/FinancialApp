@@ -1,10 +1,3 @@
-//
-//  HistoryViewController.swift
-//  financial_app
-//
-//  Created by user214203 on 4/8/22.
-//
-
 import UIKit
 
 class HistoryViewController: UIViewController {
@@ -24,7 +17,7 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 88.0 
+        self.tableView.estimatedRowHeight = 88.0
         self.tableView.rowHeight = UITableView.automaticDimension
 
         tableView.delegate = self
@@ -42,27 +35,33 @@ class HistoryViewController: UIViewController {
         
         let compundList = UserDefaults.standard.array(forKey: "COMPOUND") as? [String]
         
-        for item in saveList! {
-            print(item)
-            let history = SaveHistory(savedString: item)
-            
-            saveHistory += [history]
+        if saveList?.count ?? 0 > 0 {
+            for item in saveList! {
+                print(item)
+                let history = SaveHistory(savedString: item)
+                
+                saveHistory += [history]
+            }
         }
         
-        for item in loanList! {
-            print(item)
-            let history = SaveHistory(savedString: item)
-            
-            loanHistory += [history]
+        if loanList?.count ?? 0 > 0 {
+            for item in loanList! {
+                print(item)
+                let history = SaveHistory(savedString: item)
+                
+                loanHistory += [history]
+            }
         }
         
-        for item in compundList! {
-            print(item)
-            let history = SaveHistory(savedString: item)
+        if compundList?.count ?? 0 > 0 {
+            for item in compundList! {
+                print(item)
+                let history = SaveHistory(savedString: item)
+                
+                compoundHistory += [history]
+            }
             
-            compoundHistory += [history]
         }
-        
         
     }
 

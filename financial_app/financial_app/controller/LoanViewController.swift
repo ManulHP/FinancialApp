@@ -23,6 +23,7 @@ class LoanViewController: UIViewController {
     @IBOutlet var resertBtn: UIButton!
     
     var saveHistory: [String]?
+    var items: [LoanModel] = []
     
     var textfields: [UITextField] {
         return [loanAmountTF, loanInterestTF, monthlyPaymentTF, noOfPayamentsTF]
@@ -43,9 +44,33 @@ class LoanViewController: UIViewController {
             textfield.layer.borderWidth = 0.1
         }
         
-    
-    
-    
+        if let value = UserDefaults.standard.value(forKey: "Amount") as? String{
+            if value != nil {
+                loanAmountTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "NoPayments") as? String{
+            if value != nil {
+                noOfPayamentsTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "Payment") as? String{
+            if value != nil {
+                monthlyPaymentTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "Interest") as? String{
+            if value != nil {
+                loanInterestTF.text = value
+            }
+            print(value)
+        }
     }
     
 
@@ -75,6 +100,13 @@ class LoanViewController: UIViewController {
         }.first!
         
         return textfieldRespond
+    }
+    
+    private func getTextField(by tag: Int) -> UITextField? {
+        let tf = textfields.filter {
+            tf in return tf.tag == tag
+        }.first
+        return tf
     }
     
     private func resetTf() {
@@ -107,6 +139,11 @@ class LoanViewController: UIViewController {
             missingValue = calMissingLoanInterest(loanAmount:P!, monthlyPayment: PMT!, noOfPayment: NP!)
             loanInterestTF.text = String(missingValue)
         }
+        
+        UserDefaults.standard.set(loanAmountTF.text, forKey: "Amount") as? String
+        UserDefaults.standard.set(loanInterestTF.text, forKey: "Interest") as? String
+        UserDefaults.standard.set(monthlyPaymentTF.text, forKey: "Payment") as? String
+        UserDefaults.standard.set(noOfPayamentsTF.text, forKey: "NoPayments") as? String
     }
     
     
@@ -135,6 +172,8 @@ class LoanViewController: UIViewController {
             var saveString = "P: \(loanAmountTF.text)\nI: \(loanInterestTF.text)\nPMT: \(monthlyPaymentTF.text)\nN: \(noOfPayamentsTF.text)"
             
             print(saveString)
+            
+            
             saveHistory(saveString: saveString)
         }
         
@@ -146,6 +185,7 @@ class LoanViewController: UIViewController {
             if saveValue.count > 7 {
                 _ = saveValue.removeFirst()
             }
+            
             saveValue.append(saveString)
             UserDefaults.standard.set(saveValue, forKey: "LOAN")
         } else {
@@ -167,6 +207,7 @@ extension LoanViewController: ReusableProtocol {
                 inputText += "."
                 firstResponder.text = inputText
             }
+            
         }
     }
     
@@ -177,6 +218,7 @@ extension LoanViewController: ReusableProtocol {
             inputText += number
             firstResponder.text = inputText
         }
+        
     }
 
     func didPressDelete() {
@@ -185,6 +227,7 @@ extension LoanViewController: ReusableProtocol {
         if !(firstResponder.text?.isEmpty ?? false){
             _ = firstResponder.text?.removeLast()
         }
+
     }
     
     

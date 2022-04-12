@@ -34,6 +34,34 @@ class SavingViewController: UIViewController {
             textfield.layer.cornerRadius = 10
             textfield.layer.borderWidth = 0.1
         }
+        
+        if let value = UserDefaults.standard.value(forKey: "AmountSave") as? String{
+            if value != nil {
+                principalAmountTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "NoPaymentsSave") as? String{
+            if value != nil {
+                noOfPaymentsTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "PaymentSave") as? String{
+            if value != nil {
+                futureValueTF.text = value
+            }
+            print(value)
+        }
+        
+        if let value = UserDefaults.standard.value(forKey: "InterestSave") as? String{
+            if value != nil {
+                interestTF.text = value
+            }
+            print(value)
+        }
 
     }
     
@@ -93,6 +121,11 @@ class SavingViewController: UIViewController {
             missingValue = findMissingPresentValue(interest: I!, compoundsPerYear: CI, futureValue: FV!, noOfYears: NP!)
             principalAmountTF.text = String(missingValue)
         }
+        
+        UserDefaults.standard.set(principalAmountTF.text, forKey: "AmountSave") as? String
+        UserDefaults.standard.set(interestTF.text, forKey: "InterestSave") as? String
+        UserDefaults.standard.set(futureValueTF.text, forKey: "PaymentSave") as? String
+        UserDefaults.standard.set(noOfPaymentsTF.text, forKey: "NoPaymentsSave") as? String
         
     }
     
