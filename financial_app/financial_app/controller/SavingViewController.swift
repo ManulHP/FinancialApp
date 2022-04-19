@@ -44,7 +44,6 @@ class SavingViewController: UIViewController {
             if value != nil {
                 principalAmountTF.text = value
             }
-            print(value)
         }
         
         /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
@@ -52,7 +51,6 @@ class SavingViewController: UIViewController {
             if value != nil {
                 noOfPaymentsTF.text = value
             }
-            print(value)
         }
         
         /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
@@ -60,7 +58,6 @@ class SavingViewController: UIViewController {
             if value != nil {
                 futureValueTF.text = value
             }
-            print(value)
         }
         
         /// checks the userdaults to see whether there is a value assign to the specific key, if there's a value then that particular value is assign to the textfield as the default value
@@ -68,7 +65,6 @@ class SavingViewController: UIViewController {
             if value != nil {
                 interestTF.text = value
             }
-            print(value)
         }
 
     }
