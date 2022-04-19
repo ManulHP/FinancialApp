@@ -10,7 +10,7 @@ import UIKit
 /// details of the help section
 class AboutViewController: UIViewController {
 
-    
+    ///  outlets related to the view cards (save, compound, loan)
     @IBOutlet var loanView: UIView!
     @IBOutlet var compoundView: UIView!
     @IBOutlet var saveView: UIView!
@@ -24,6 +24,7 @@ class AboutViewController: UIViewController {
 
         viewSettings()
         
+        /// create a blur effect to the save image
         if !UIAccessibility.isReduceTransparencyEnabled {
             saveImage.backgroundColor = .clear
 
@@ -33,11 +34,12 @@ class AboutViewController: UIViewController {
             blurEffectView.frame = self.saveImage.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-            saveImage.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            saveImage.addSubview(blurEffectView)
         } else {
             saveImage.backgroundColor = .black
         }
         
+        /// create a blur effect to the loan  image
         if !UIAccessibility.isReduceTransparencyEnabled {
             loanImage.backgroundColor = .clear
 
@@ -47,11 +49,12 @@ class AboutViewController: UIViewController {
             blurEffectView.frame = self.loanImage.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-            loanImage.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            loanImage.addSubview(blurEffectView)
         } else {
             loanImage.backgroundColor = .black
         }
         
+        /// create a blur effect to the compound image
         if !UIAccessibility.isReduceTransparencyEnabled {
             compoundImage.backgroundColor = .clear
 
@@ -61,27 +64,30 @@ class AboutViewController: UIViewController {
             blurEffectView.frame = self.compoundImage.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-            compoundImage.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            compoundImage.addSubview(blurEffectView)
         } else {
             compoundImage.backgroundColor = .black
         }
     }
     
     public func viewSettings() {
+        /// adding view properties to the save view
         saveView.layer.cornerRadius = 20 // raduis == 20
         saveView.layer.borderColor = UIColor.black.cgColor // border color == black
         saveView.layer.borderWidth = 3.5 // border width == 3.5
         saveView.layer.masksToBounds = true // sublayers clipped together
         
-        compoundView.layer.cornerRadius = 20
-        compoundView.layer.borderColor = UIColor.black.cgColor
-        compoundView.layer.borderWidth = 3.5
-        compoundView.layer.masksToBounds = true
+        /// adding view properties to the compound view
+        compoundView.layer.cornerRadius = 20 // raduis == 20
+        compoundView.layer.borderColor = UIColor.black.cgColor // border color == black
+        compoundView.layer.borderWidth = 3.5 // border width == 3.5
+        compoundView.layer.masksToBounds = true // sublayers clipped together
         
-        loanView.layer.cornerRadius = 20
-        loanView.layer.borderColor = UIColor.black.cgColor
-        loanView.layer.borderWidth = 3.5
-        loanView.layer.masksToBounds = true
+        /// adding view properties to the loan view
+        loanView.layer.cornerRadius = 20 // raduis == 20
+        loanView.layer.borderColor = UIColor.black.cgColor // border color == black
+        loanView.layer.borderWidth = 3.5 // border width == 3.5
+        loanView.layer.masksToBounds = true // sublayers clipped together
     }
 
 }
