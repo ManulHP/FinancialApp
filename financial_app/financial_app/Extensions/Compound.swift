@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 /// operations of the compound screen are listed below
-/// t ± time in years (synonymous with number of payments)
-/// r (%) ± interest rate ± for simple savings only1
-/// P ± present value
-/// PMT ± Payment
-/// A ± future value
+/// t = time in years (synonymous with number of payments)
+/// r (%) = interest rate ± for simple savings only
+/// P = present value
+/// PMT = Payment
+/// A = future value
 
 extension UIViewController {
     ///finding the principal amount or the present ammount

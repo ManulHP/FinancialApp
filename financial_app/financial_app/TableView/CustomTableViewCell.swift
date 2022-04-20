@@ -20,6 +20,7 @@ class CustomTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
            super.layoutSubviews()
+        /// content padding
            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2))
        }
 }

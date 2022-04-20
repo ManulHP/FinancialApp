@@ -2,12 +2,12 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    /// outlet for the table view
     @IBOutlet var tableView: UITableView!
     
     var loanHistory = [SaveHistory]()
     var saveHistory = [SaveHistory]()
     var compoundHistory = [SaveHistory]()
-
     
     @IBOutlet var segmentControl: UISegmentedControl!
     
